@@ -11,8 +11,8 @@
 
 /* HOME PAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
-/* HEADER/NAV BAR _____________________________________________ */
-header {
+/* NAV BAR _____________________________________________ */
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,10 +22,12 @@ header {
   justify-content: space-between;
   align-items: center;
   gap: 50px;
-  /* padding: 40px 100px; */
+  background: rgb(28, 30, 32);
+  padding: 20px 40px 20px 30px;
+  box-shadow: 0 5px 20px gray;
 }
 
-header .logo {
+.logo {
   color: white;
   font-weight: bold;
   font-size: 1.5em;
@@ -33,37 +35,28 @@ header .logo {
   font-family: "racing sans one";
 }
 
-header .logo span {
+.logo span {
   color: red;
   font-family: "racing sans one";
   font-size: 1.5em;
-  /* display: inline;  */
-  /* text-align: left; */
 }
 
-header .navigation {
+.navigation {
   display: flex;
   position: relative;
 }
 
-header .navigation li {
+.navigation li {
   list-style: none;
   margin-left: 30px;
 }
 
-header .navigation li a {
+.navigation li a {
   text-decoration: none;
   color: white;
   font-weight: 500;
   font-size: 1.4em;
   transition: 0.5s;
-}
-
-.navbar {
-  /* "nav bar" */
-  background: rgb(28, 30, 32);
-  padding: 20px 40px 20px 30px;
-  box-shadow: 0 5px 20px gray;
 }
 
 /* BANNER SECTION _____________________________________________ */
@@ -188,7 +181,6 @@ header .navigation li a {
 .teams .text h2 {
   padding: 20px 5px;
   color: white;
-  background-color: rgba(112, 112, 112, 0.273);
 }
 
 .teams-btn {
@@ -242,18 +234,10 @@ header .navigation li a {
   position: relative;
 }
 
-/* form {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-} */
-
 .contact-form {
   padding: 30px 40px;
   background: rgba(231, 2, 2, 0.66);
   box-shadow: 0 15px 20px black;
-  /* max-width: 900px; */
   border-radius: 10px;
   width: 100%;
 }
@@ -336,11 +320,9 @@ form input[type="submit"]:hover {
   flex-direction: row;
   justify-content: space-between;
   margin-top: 100px;
-  /* padding: 60px 80px; */
 }
 
 .about .content {
-  /* align-items: center; */
   flex-wrap: nowrap;
 }
 
@@ -351,13 +333,11 @@ form input[type="submit"]:hover {
 .about .image-box img {
   max-width: 800px;
   padding-top: 100px;
-  /* width: 100%;  */
 }
 
 .about .p-title {
   color: black;
   font-family: "roboto";
-  /* margin-top: 15px; */
   font-size: 1.3em;
   text-align: left;
   font-weight: 350;
@@ -404,12 +384,9 @@ form input[type="submit"]:hover {
 
 /* HISTORY SECTION _____________________________________________ */
 .history {
-  /* align-items: center; */
-  /* text-align: center; */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* width: 100%; */
   min-height: 120vh;
   z-index: 1;
   position: relative;
@@ -433,7 +410,6 @@ form input[type="submit"]:hover {
 .history .content {
   display: flex;
   flex-direction: row;
-  /* flex-wrap: wrap; */
   gap: 40px;
 }
 
@@ -444,10 +420,8 @@ form input[type="submit"]:hover {
 }
 
 .history .title {
-  /* width: 100%; */
   align-content: center;
   padding-top: 40px;
-  /* padding: 0 10px; */
 }
 
 .history .h-title {
@@ -492,7 +466,7 @@ form input[type="submit"]:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+
   position: relative;
   padding: 60px 10px 120px 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.385);
@@ -509,7 +483,6 @@ form input[type="submit"]:hover {
   width: 100%;
   position: absolute;
   inset: 0;
-  /* transform: scale(1.1); */
 }
 
 .drivers .content {
@@ -641,7 +614,7 @@ th {
 
 /* FOOTER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .footer {
-  background: rgba(0, 0, 0, 0.906);
+  background: rgba(7, 7, 7, 0.633);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -688,10 +661,8 @@ th {
 .footer-credit {
   font-family: poppins;
   font-size: 0.8em;
-  opacity: 75%;
+  opacity: 70%;
 }
-
-/* BUTTONS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /* MEDIA QUERIES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
@@ -714,19 +685,27 @@ th {
 }
 
 @media (max-width: 990px) {
-  header {
+  .navbar {
     flex-direction: column;
     gap: 15px;
   }
 
-  header .navigation {
+  .navbar .navigation {
     flex-wrap: wrap;
     justify-content: center;
   }
 
-  .about .box {
+  .about .content {
     flex-direction: column;
-    gap: 40px;
+    text-align: center;
+  }
+
+  .about .title p {
+    padding: 15px 0 0 0;
+  }
+
+  .h-title {
+    padding: 0 50px;
   }
 
   .mission {
@@ -745,7 +724,7 @@ th {
   }
 
   .banner-content h2 {
-    font-size: 26pt;
+    font-size: 28pt;
   }
 
   .teams .box {
@@ -758,7 +737,7 @@ th {
     padding: 20px;
   }
 
-  .about .box .image-box {
+  .about .content .image-box {
     min-width: 100%;
   }
 
@@ -768,11 +747,11 @@ th {
 }
 
 @media (max-width: 480px) {
-  .header .logo {
+  .navbar .logo {
     font-size: 1.1em;
   }
 
-  header .navigation li a {
+  .navbar .navigation li a {
     font-size: 1em;
   }
 
@@ -806,8 +785,6 @@ section {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  /* padding-top: 25px; */
-  /* width: 100%; */
 }
 
 .box {
@@ -816,7 +793,6 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   align-items: center;
-  /* width: 100%; */
 }
 
 .image-box img {
@@ -826,7 +802,6 @@ section {
 }
 
 /* Section Titles */
-
 p {
   font-weight: 300;
   color: white;
@@ -863,7 +838,6 @@ p {
   font-size: 1.3em;
   text-align: center;
   letter-spacing: 1px;
-  /* padding: 20px 5px; */
 }
 .text p {
   text-align: center;
