@@ -23,7 +23,7 @@
   align-items: center;
   gap: 50px;
   background: rgb(28, 30, 32);
-  padding: 20px 40px 20px 30px;
+  padding: 35px 40px 20px 30px;
   box-shadow: 0 5px 20px gray;
 }
 
@@ -66,7 +66,7 @@
   justify-content: center;
   width: 100%;
   min-height: 100vh;
-  z-index: 100;
+  z-index: 1;
   position: relative;
   box-shadow: 0 5px 20px gray;
 }
@@ -85,33 +85,33 @@
 .banner-content {
   /* max-width: 900px; */
   text-align: center;
-  padding: 100px 50px;
+  padding: 100px 100px;
   z-index: 1;
 }
 
-.banner-content h2 {
-  font-size: clamp(2.1rem, 5vw, 3rem);
+.banner .banner-content h2 {
+  font-size: clamp(2.5rem, 3vw, 3rem);
   color: white;
   letter-spacing: 0.8px;
 }
 /* Pinnacle */
-.banner-content h2 span {
+.banner .banner-content h2 span {
   color: red;
-  font-size: clamp(2.8rem, 7vw, 4.5rem);
+  font-size: clamp(4.5rem, 7vw, 4rem);
   font-family: "racing sans one";
   letter-spacing: 0px;
 }
 
 .banner-content p {
-  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
   color: white;
-  padding-top: 20px;
+  padding: 20px 80px 0 80px;
   letter-spacing: 0.3px;
   font-family: fjalla one;
 }
 
 .banner-btn {
-  font-size: 1.2em;
+  font-size: 1.5em;
   color: white;
   background-color: rgba(255, 0, 0, 0.76);
   padding: 8px 10px;
@@ -128,6 +128,117 @@
 
 .banner a:hover {
   color: black;
+}
+
+/* UPCOMING SECTION _____________________________________________ */
+.upcoming {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 120vh;
+  z-index: 1;
+  position: relative;
+  padding: 20px 10px 150px 10px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.731);
+}
+
+.upcoming .content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.upcoming .box {
+  background: cover;
+  background-color: rgba(0, 0, 0, 0.599);
+  max-width: 450px;
+}
+
+.upcoming .title {
+  align-content: center;
+  padding-top: 40px;
+}
+
+.upcoming .h-title {
+  color: white;
+  font-size: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.upcoming .text p {
+  padding: 0px;
+}
+
+.upcoming .round-track {
+  /* display: inline; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.upcoming .upcoming-round {
+  text-align: left;
+  margin-left: 15px;
+  font-weight: 300;
+  margin-top: 8px;
+  opacity: 60%;
+}
+
+.upcoming .upcoming-track {
+  font-family: racing sans one;
+  font-size: 1.9em;
+  color: red;
+  text-align: right;
+  margin-top: 5px;
+  margin-right: 20px;
+  text-decoration: underline;
+}
+
+.upcoming .upcoming-dates {
+  font-family: monospace;
+  font-size: 1.4em;
+  text-align: right;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.upcoming-btn {
+  color: white;
+  font-family: racing sans one;
+  font-weight: 500;
+  letter-spacing: 1;
+  font-size: 1.6em;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.5s;
+  display: inline-block;
+  padding: 20px;
+}
+
+.upcoming a:hover {
+  color: red;
+}
+
+.upcoming .box img:hover {
+  filter: contrast(120%);
+}
+
+.upcoming .box #previous img {
+  filter: grayscale(100%) saturate(100%);
+  transition: filter 0.3s ease;
+}
+
+.upcoming .box #previous img:hover {
+  filter: grayscale(0);
+}
+
+.upcoming #previous {
+  opacity: 75%;
+}
+
+.upcoming #previous .upcoming-track {
+  color: rgb(159, 155, 155);
 }
 
 /* TEAMS SECTION _____________________________________________ */
@@ -181,6 +292,8 @@
 .teams .text h2 {
   padding: 20px 5px;
   color: white;
+  font-size: 1.6em;
+  letter-spacing: 1.5px;
 }
 
 .teams-btn {
@@ -556,7 +669,7 @@ th {
   letter-spacing: 1px;
   color: white;
   text-transform: uppercase;
-  font-size: 0.9em;
+  font-size: 1em;
   font-family: poppins;
   border-spacing: 8px;
 }
@@ -567,7 +680,7 @@ th {
   color: red;
 }
 .tb-headers {
-  color: rgb(182, 182, 182);
+  color: rgb(202, 202, 202);
   border: 0px;
   font-weight: 800;
   letter-spacing: 0.6px;
@@ -582,6 +695,7 @@ th {
   padding: 50px 0px 30px 0px;
   color: white;
   font-size: clamp(3rem, 5vw, 3.5rem);
+  font-family: racing sans one;
 }
 
 .race-schedule {
@@ -614,7 +728,7 @@ th {
 
 /* FOOTER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .footer {
-  background: rgba(7, 7, 7, 0.633);
+  background: rgb(7, 7, 7);
   width: 100%;
   display: flex;
   justify-content: center;
@@ -622,6 +736,7 @@ th {
   flex-direction: column;
   padding: 10px 0;
   gap: 10px;
+  opacity: 90%;
 }
 
 .footer-links {
@@ -792,7 +907,6 @@ section {
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
 }
 
 .image-box img {
@@ -820,7 +934,7 @@ p {
 .h-title span {
   color: red;
   font-weight: 700;
-  font-size: clamp(3rem, 5vw, 3.5rem) !important;
+  font-size: clamp(3rem, 5vw, 3.5rem);
   font-family: "racing sans one";
 }
 

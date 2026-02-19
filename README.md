@@ -2,7 +2,7 @@
 
 Event center website - html assignment #2
 
-# 🌐 Portfolio Website
+# 🌐 Event Center Website
 
 ## Author
 
