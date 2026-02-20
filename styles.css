@@ -1,5 +1,5 @@
 /* FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Allan:wght@400;700&family=Bangers&family=Fjalla+One&family=Fugaz+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kalam:wght@300;400;700&family=Knewave&family=Koulen&family=League+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&family=Shrikhand&family=Squada+One&family=Sriracha&family=Titan+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&display=swap");
 
 /* RESET + GENERAL !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 * {
@@ -11,7 +11,8 @@
 
 body {
   font-family: "fjalla one", sans-serif;
-  padding-top: 80px;
+  margin-top: 80px;
+  background: rgba(0, 0, 0, 0.11);
 }
 
 img {
@@ -22,6 +23,12 @@ img {
 
 section {
   padding: clamp(40px, 6vw, 90px) clamp(20px, 5vw, 80px);
+  min-height: auto;
+}
+
+.about .mission {
+  padding: clamp(40px, 6vw, 90px) clamp(20px, 5vw, 80px);
+  min-height: auto;
 }
 
 /* FLEXBOX */
@@ -30,11 +37,6 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-}
-
-.box {
-  /* display: flex; */
-  /* flex-direction: column; */
 }
 
 /* GENERAL TEXT FORMAT */
@@ -55,8 +57,8 @@ p {
   font-weight: 300;
 }
 
-.title, #s-title {
-  padding-bottom: 40px; 
+.title {
+  padding-bottom: 40px;
 }
 
 /* CARD */
@@ -86,15 +88,13 @@ p {
 .navbar {
   position: fixed;
   top: 0;
-  /* left: 0; */
   width: 100%;
   z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* gap: 50px; */
   background: rgb(28, 30, 32);
-  padding: clamp(20px 5vw, 60px);
+  padding: clamp(20px, 5vw, 60px);
   box-shadow: 0 5px 20px gray;
   padding: 20px 25px 10px 25px;
 }
@@ -110,22 +110,17 @@ p {
 .logo span {
   color: red;
   font-size: 1.8rem;
-  /* font-family: "racing sans one"; */
 }
 
 .navigation {
   display: flex;
-  /* flex-wrap: wrap; */
   gap: 25px;
   list-style: none;
-  /* margin-left: 30px; */
-  /* position: relative; */
 }
 
 .navigation a {
   text-decoration: none;
   color: white;
-  /* font-weight: 500; */
   font-size: 1.2rem;
   transition: 0.3s;
 }
@@ -138,7 +133,6 @@ p {
 .banner {
   display: flex;
   justify-content: center;
-  height: 100%;
   min-height: 100vh;
   z-index: 10;
   position: relative;
@@ -146,24 +140,11 @@ p {
   text-align: center;
 }
 
-/* .banner::before {
-  content: "";
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(https://i.postimg.cc/wTYhkG6C/f1-banner4.avif) center/cover;
-  background-size: fit;
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  height: 100%;
-  object-fit: cover;
-} */
-
 .banner-content {
-   max-width: 900px; */
+  max-width: 900px;
   text-align: center;
   padding: 100px 20px;
-   z-index: 1; */
+  z-index: 1;
 }
 
 .banner h2 {
@@ -205,9 +186,8 @@ p {
 }
 
 .banner-btn:hover {
-   CHANGE HOVER IN ALL BUTTONS TO THIS FORMAT******* */
   color: red;
-  background: white;
+  background: rgba(0, 0, 0, 0.303);
 }
 
 /* UPCOMING EVENTS SECTION _____________________________________________ */
@@ -240,12 +220,11 @@ p {
 }
 
 .upcoming .image-box img {
-    object-fit: cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
-  filter: contrast(95%)
+  filter: contrast(95%);
 }
-
 
 .upcoming h3 {
   font-size: 1.4rem;
@@ -259,7 +238,6 @@ p {
   font-size: 1.1rem;
 }
 
-
 .upcoming .card-round {
   text-align: left;
   font-weight: 400;
@@ -267,7 +245,7 @@ p {
 }
 
 .upcoming .card-track {
-  font-family: racing sans one;
+  font-family: "racing sans one";
   font-size: 1.7rem;
   color: red;
   text-align: right;
@@ -282,7 +260,7 @@ p {
 
 .upcoming-btn {
   color: white;
-  font-family: racing sans one;
+  font-family: "racing sans one";
   font-size: 1.6rem;
   text-decoration: none;
   letter-spacing: 1px;
@@ -298,7 +276,7 @@ p {
 
 /* ----> card = red */
 .upcoming .card:hover {
-  background: linear-gradient(black);
+  background: rgba(0, 0, 0, 0.836);
   filter: contrast(110%);
   transition: filter 0.3s ease;
 }
@@ -322,7 +300,7 @@ p {
 
 /* ----> if hover, previous card  */
 #previous:hover {
-  background: #111111d2;
+  background: rgba(0, 0, 0, 0.836);
   opacity: 100%;
   filter: grayscale(0) saturate(100%) contrast(120%);
   color: red;
@@ -347,14 +325,14 @@ p {
 
 .teams .card-container {
   display: flex;
-flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
 }
 
 .teams .card {
   box-shadow: 0 5px 25px rgba(135, 135, 135, 0.443);
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.4);
   height: 360px;
   width: 300px;
   display: flex;
@@ -426,7 +404,7 @@ flex-wrap: wrap;
   background:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)),
     url(https://i.postimg.cc/3wxNsFdm/dramatic_season_openers_header_webp.avif)
-      center/cover;
+      center/cover no-repeat;
   z-index: -1;
   position: fixed;
   inset: 0;
@@ -477,7 +455,7 @@ flex-wrap: wrap;
 }
 
 .contact-form input[type="submit"] {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   background: whitesmoke;
   text-transform: uppercase;
   max-width: 130px;
@@ -511,11 +489,11 @@ form input[type="submit"]:hover {
 
 .about .image-box {
   flex: 1 1 400px;
+  align-items: flex-end;
 }
 
 .about .title {
   flex: 1 1 400px;
-  padding: 0 40px;
 }
 
 .about .h-title {
@@ -526,27 +504,19 @@ form input[type="submit"]:hover {
 .about p {
   color: black;
   font-family: "roboto flex";
-  font-size: clamp (1rem, 1.4vw, 1.3rem);
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
   text-align: left;
-  font-weight: 350;
+  font-weight: 300;
   text-align: justify;
-  letter-spacing: 0;
-}
-
-/* ABOUT + MISSION WRAPPER _____________________________________________*/
-.about-and-mission {
-  box-shadow: 0 10px 20px rgb(4, 4, 4);
-  padding: 40px;
-  margin: 40px;
-  background: rgba(0, 0, 0, 0.11);
-  border-radius: 5px;
+  padding-right: 20px;
 }
 
 /* MISSION SECTION _____________________________________________ */
 .mission {
   text-align: center;
-  margin: 30px;
-  padding: 40px;
+  align-content: center;
+  margin: 0 70px 80px 70px;
+  padding: 60px;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.643);
   border-radius: 12px;
   color: white;
@@ -562,25 +532,22 @@ form input[type="submit"]:hover {
   letter-spacing: 0.5px;
 }
 
-.mission .title p {
-}
-
 /* HISTORY SECTION _____________________________________________ */
 .history {
   justify-content: center;
-  min-height: 100vh;
   align-content: center;
   text-align: center;
-  color: white;
   position: relative;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.731);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.848);
+  height: auto;
 }
 
 .history::before {
   content: "";
   background:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgb(0, 0, 0)),
-    url(https://i.postimg.cc/kX51ff3c/C62374B_W_webp.avif) center/cover;
+    linear-gradient(rgba(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)),
+    url(https://i.postimg.cc/kX51ff3c/C62374B_W_webp.avif) center/cover
+      no-repeat;
   z-index: -1;
   position: absolute;
   inset: 0;
@@ -601,6 +568,7 @@ form input[type="submit"]:hover {
 }
 
 .history .h-title {
+  color: black;
 }
 
 .history .card-text {
@@ -625,30 +593,31 @@ form input[type="submit"]:hover {
 
 /* MEET THE DRIVERS SECTION _____________________________________________ */
 .drivers {
-  min-height: 100vh;
   justify-content: center;
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.385);
-  padding: 40px;
+  /* padding: 40px; */
   align-content: center;
-
+  height: auto;
 }
 
 .drivers::before {
   content: "";
   background:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(https://i.postimg.cc/mD0rFxVH/Getty_Images_2151452065_webp.avif)
-      center/cover;
+    linear-gradient(rgba(0, 0, 0, 0.67), rgba(0, 0, 0, 0.644)),
+    url(https://i.postimg.cc/MpdKmfdK/1017608775_LAT_20190714_ONY6556_webp.avif)
+      center/cover no-repeat;
   z-index: -1;
   position: absolute;
   inset: 0;
 }
 
 .drivers .card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+  margin: auto;
 }
 
 .drivers .card {
@@ -656,10 +625,9 @@ form input[type="submit"]:hover {
   max-height: 500px;
   box-shadow: 0 5px 25px gray;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.3);
   text-align: center;
 }
-
 
 .drivers .image-box img {
   object-fit: cover;
@@ -673,7 +641,6 @@ form input[type="submit"]:hover {
   font-family: "racing sans one";
 }
 
-
 .drivers .text {
   color: white;
   flex: 1;
@@ -682,10 +649,9 @@ form input[type="submit"]:hover {
   align-items: center;
   text-align: center;
   justify-content: center;
-
 }
 
- /* ---> driver name in about page */
+/* ---> driver name in about page */
 .driver-btn {
   font-size: 1.3rem;
   letter-spacing: 0.5px;
@@ -703,6 +669,29 @@ form input[type="submit"]:hover {
 
 /* EVENTS PAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* SCHEDULE SECTION _____________________________________________ */
+
+.schedule {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.schedule::before {
+  content: "";
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.642)),
+    url(https://i.postimg.cc/Gp5GZdy1/1750720263_jpg.avif) center/cover
+      no-repeat;
+  z-index: -1;
+  position: fixed;
+  inset: 0;
+}
+
+.race-schedule {
+  background-color: rgba(0, 0, 0, 0.58);
+  box-shadow: 0 8px 20px black;
+}
+
 table {
   width: 100%;
   border-collapse: separate;
@@ -736,29 +725,6 @@ th {
 
 .schedule .h-title {
   color: white;
-  padding-bottom: 25px;
-}
-
-.race-schedule {
-  background-color: rgba(0, 0, 0, 0.689);
-  box-shadow: 0 8px 20px black;
-}
-
-.schedule {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 40px 80px;
-}
-
-.schedule::before {
-  content: "";
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.642)),
-    url(https://i.postimg.cc/Gp5GZdy1/1750720263_jpg.avif) center/cover;
-  z-index: -1;
-  position: fixed;
-  inset: 0;
 }
 
 /* FOOTER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -768,6 +734,9 @@ th {
   text-align: center;
   padding: 25px 15px;
   opacity: 80%;
+  bottom: 0;
+  /* position: absolute; */
+  width: 100%;
 }
 
 .footer ul {
@@ -794,9 +763,10 @@ th {
 }
 
 .footer-credit {
-  font-family: poppins;
+  font-family: "poppins";
   font-size: 0.8rem;
   opacity: 70%;
+  padding-bottom: 10px;
 }
 
 /* MEDIA QUERIES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -816,22 +786,37 @@ th {
     text-align: center;
   }
 
+  .about p-text {
+    padding-right: 0px;
+  }
+
   .mission {
     margin: 40px 20px;
+  }
+
+  footer {
+    bottom: 0;
+    width: 100%;
   }
 }
 
 @media (min-width: 600px) {
-
-  .drivers .card .teams .card .history .card .upcoming .card {
-    width:100%;
+  section {
+    min-height: auto;
   }
 
+  .about .mission {
+    min-height: auto;
+  }
+
+  .drivers .card .teams .card .history .card .upcoming .card {
+    width: 100%;
+  }
 
   .drivers {
-  justify-content: center;
-  display: flex;
-  flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .navbar {
@@ -842,9 +827,63 @@ th {
     justify-content: center;
   }
 
-  .banner-content {
-    padding-top: 140px;
+  .about-and-mission {
+    padding: 0;
+  }
 
+  .schedule {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  table {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  th,
+  td {
+    padding: 8px;
+    text-align: center;
+  }
+
+  footer {
+    position: relative;
+    width: 100%;
+    font-size: 1rem;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 30px;
+    min-height: auto;
+  }
+
+  .about .mission {
+    padding: 30px;
+    min-height: auto;
+  }
+
+  .navbar {
+    padding: 10px;
+    font-size: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .navigation {
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .mission {
+    padding: 20px 15px;
   }
 
   .about .h-title {
@@ -852,45 +891,27 @@ th {
   }
 
   .schedule {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  }
-
-  footer {
-    position: relative;
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .logo {
-    font-size: 1.2rem;
-  }
-
-  section {
-    padding: 30px;
-  }
-
-  .navbar {
-    padding: 10px;
-  }
-
-  .navbar {
-    font-size: .5rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .h-title {
-    font-size: 1.6rem;
+  table {
+    font-size: 0.5rem;
+    padding: 3px;
+    text-align: center;
   }
 
-  .h-title span {
-    font-size: 2rem;
+  th,
+  td {
+    padding: 5px;
+    text-align: center;
   }
 
-  .mission {
-    padding: 20px 15px;
+  .footer-links,
+  .footer-credit {
+    font-size: 0.7rem;
+    bottom: 0;
+    width: 100%;
   }
 }
