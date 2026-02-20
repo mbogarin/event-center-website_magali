@@ -141,6 +141,7 @@ p {
   z-index: 10;
   position: relative;
   box-shadow: 0 5px 20px gray;
+  /* margin-top: 0px; */
 }
 
 .banner::before {
@@ -231,7 +232,7 @@ p {
   /* flex-direction: row; */
   justify-content: center;
   gap: 30px;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 .upcoming .card {
@@ -274,7 +275,8 @@ flex-direction: column;
   color: white;
   /* font-size: clamp(2rem, 5vw, 3rem); */
   /* text-align: center; */
-  padding: 20px auto;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .upcoming p {
@@ -426,7 +428,8 @@ flex-wrap: wrap;
 .teams .h-title {
   /* color: white; */
   /* font-size: clamp(2rem, 5vw, 3rem); */
-  padding: 20px auto;
+  padding-top: 80px;
+  padding-bottom: 30px;
 }
 
 .teams #mercedes {
@@ -468,16 +471,17 @@ flex-wrap: wrap;
   box-shadow: 0 5px 20px gray;
   /* font-family: "racing sans one"; */
   color: white;
-  /* font-size: clamp(1.2rem, 2.5vw, 1.6rem); */
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
 }
 
 .teams-btn:hover {
-  color: red;
-  background: black;
+  color: white;
+  background: red;
   transition: 0.3s;
 }
 
 /* CONTACT SECTION  _____________________________________________ */
+
 .teams-and-contact::before {
   content: "";
   background:
@@ -514,10 +518,11 @@ flex-wrap: wrap;
   margin: 40px auto 0;
 }
 
-/* .contact .h-title {
-  color: white;
-  font-size: clamp(2rem, 5vw, 3rem);
-} */
+.contact .h-title {
+  padding-top: 80px;
+  /* color: white; */
+  /* font-size: clamp(2rem, 5vw, 3rem); */
+}
 
 /* .contact .h-title span {
   font-size: clamp(2rem, 5vw, 3rem);
@@ -571,7 +576,7 @@ flex-wrap: wrap;
   text-transform: uppercase;
   /* text-decoration: none; */
   /* letter-spacing: 0.2px; */
-  max-width: 100px;
+  max-width: 130px;
   /* transition: 0.3s; */
   font-weight: bold;
   /* border: none; */
@@ -583,7 +588,7 @@ flex-wrap: wrap;
 }
 
 form input[type="submit"]:hover {
-  color: black;
+  color: white;
   border: none;
   background: red;
   transition: 0.3s;
@@ -646,13 +651,13 @@ form input[type="submit"]:hover {
 
 /* ABOUT + MISSION WRAPPER _____________________________________________*/
 .about-and-mission {
-  box-shadow: 0 10px 20px rgba(4, 4, 4, 0.616);
+  box-shadow: 0 10px 20px rgb(4, 4, 4);
   /* padding-bottom: 30px; */
   padding: 40px;
   margin: 40px;
   /* opacity: 95%; */
-  background: rgba(0, 0, 0, 0.084);
-  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.278);
+  border-radius: 5px;
 }
 
 /* MISSION SECTION _____________________________________________ */
@@ -737,14 +742,22 @@ form input[type="submit"]:hover {
   padding-bottom: 40px;
 }
 
+.history .card-text {
+  padding: 15px;
+}
+
+.history .card-text p {
+  padding-bottom: 20px;
+}
+
 .history-btn {
   color: white;
   font-family: "racing sans one";
   /* font-weight: 500; */
-  /* font-size: 1.6em; */
+  font-size: 1.5em;
   /* text-decoration: none; */
   letter-spacing: 1px;
-  transition: 0.3s;
+  transition: 0.5s;
   /* display: inline-block; */
 }
 
