@@ -1,12 +1,79 @@
-/* google font URL */
+/* FONTS */
 @import url("https://fonts.googleapis.com/css2?family=Alkatra:wght@400..700&family=Allan:wght@400;700&family=Bangers&family=Fjalla+One&family=Fugaz+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kalam:wght@300;400;700&family=Knewave&family=Koulen&family=League+Gothic&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto:ital,wght@0,100..900;1,100..900&family=Russo+One&family=Shrikhand&family=Squada+One&family=Sriracha&family=Titan+One&display=swap");
 
+/* RESET + GENERAL !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "fjalla one";
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "fjalla one", sans-serif;
+  padding-top: 80px;
+}
+
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+section {
+  padding: clamp(40px, 6vw, 90px) clamp(20px, 5vw, 80px);
+}
+
+/* FLEXBOX */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.box {
+  /* display: flex; */
+  /* flex-direction: column; */
+}
+
+/* GENERAL TEXT FORMAT */
+.h-title {
+  font-family: "Racing Sans One";
+  font-weight: 100;
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.h-title span {
+  color: red;
+  font-size: clamp(2.4rem, 5vw, 3.5rem);
+}
+
+p {
+  font-family: "Roboto";
+  font-weight: 300;
+}
+
+/* CARD */
+
+.card-container {
+  color: white;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 5px;
+  overflow: hidden;
+  height: 100%;
+  max-width: 420px;
+}
+
+.card-text {
+  padding: 20px;
+  text-align: center;
 }
 
 /* HOME PAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -15,58 +82,63 @@
 .navbar {
   position: fixed;
   top: 0;
-  left: 0;
+  /* left: 0; */
   width: 100%;
-  z-index: 1000;
+  z-index: 999;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 50px;
+  /* gap: 50px; */
   background: rgb(28, 30, 32);
-  padding: 35px 40px 20px 30px;
+  padding: clamp(20px 5vw, 60px);
   box-shadow: 0 5px 20px gray;
+  padding: 20px 25px 10px 25px;
 }
 
 .logo {
   color: white;
-  font-weight: bold;
-  font-size: 1.5em;
+  /* font-weight: bold; */
+  font-size: 1.6rem;
   text-decoration: none;
   font-family: "racing sans one";
 }
 
 .logo span {
   color: red;
-  font-family: "racing sans one";
-  font-size: 1.5em;
+  font-size: 1.8rem;
+  /* font-family: "racing sans one"; */
 }
 
 .navigation {
   display: flex;
-  position: relative;
-}
-
-.navigation li {
+  /* flex-wrap: wrap; */
+  gap: 25px;
   list-style: none;
-  margin-left: 30px;
+  /* margin-left: 30px; */
+  /* position: relative; */
 }
 
-.navigation li a {
+.navigation a {
   text-decoration: none;
   color: white;
-  font-weight: 500;
-  font-size: 1.4em;
-  transition: 0.5s;
+  /* font-weight: 500; */
+  font-size: 1.2rem;
+  transition: 0.3s;
+}
+
+.navigation a:hover {
+  color: red;
 }
 
 /* BANNER SECTION _____________________________________________ */
 .banner {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
-  width: 100%;
+  /* align-items: center; */
+  height: 100%;
   min-height: 100vh;
-  z-index: 1;
+  z-index: 10;
   position: relative;
   box-shadow: 0 5px 20px gray;
 }
@@ -75,170 +147,229 @@
   content: "";
   background:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(https://i.postimg.cc/wTYhkG6C/f1-banner4.avif) center/cover no-repeat;
-  background-size: cover;
+    url(https://i.postimg.cc/wTYhkG6C/f1-banner4.avif) center/cover;
+  /* background-size: cover; */
   position: absolute;
   z-index: -1;
   inset: 0;
+  /* height: 100%; */
+  object-fit: cover;
 }
 
 .banner-content {
   /* max-width: 900px; */
   text-align: center;
-  padding: 100px 100px;
-  z-index: 1;
+  padding: 100px 20px;
+  /* z-index: 1; */
 }
 
-.banner .banner-content h2 {
-  font-size: clamp(2.5rem, 3vw, 3rem);
+.banner h2 {
+  font-size: clamp(2.3rem, 4vw, 3rem);
   color: white;
   letter-spacing: 0.8px;
 }
-/* Pinnacle */
-.banner .banner-content h2 span {
+
+.banner h2 span {
+  /* "Pinnacle" */
   color: red;
-  font-size: clamp(4.5rem, 7vw, 4rem);
+  font-size: clamp(3rem, 7vw, 4.5rem);
   font-family: "racing sans one";
   letter-spacing: 0px;
 }
 
-.banner-content p {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+.banner p {
+  font-size: clamp(1rem, 2vw, 1.4rem);
   color: white;
-  padding: 20px 80px 0 80px;
-  letter-spacing: 0.3px;
-  font-family: fjalla one;
+  margin: 20px auto;
+  /* letter-spacing: 0.3px; */
+  font-family: "fjalla one";
+  max-width: 800px;
 }
 
 .banner-btn {
-  font-size: 1.5em;
+  font-size: 1.5rem;
   color: white;
   background-color: rgba(255, 0, 0, 0.76);
-  padding: 8px 10px;
+  padding: 10px 20px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: 0.5s;
-  margin-top: 50px;
+  transition: 0.3s;
+  margin-top: 25px;
   display: inline-block;
-  font-weight: 900;
-  border-radius: 5px;
+  font-weight: bold;
+  border-radius: 6px;
   box-shadow: 0 2px 20px rgb(134, 133, 133);
 }
 
-.banner a:hover {
-  color: black;
+.banner-btn:hover {
+  /* CHANGE HOVER IN ALL BUTTONS TO THIS FORMAT******* */
+  color: red;
+  background: white;
 }
 
-/* UPCOMING SECTION _____________________________________________ */
+/* UPCOMING EVENTS SECTION _____________________________________________ */
 .upcoming {
   display: flex;
+  /* text-align: center; */
   flex-direction: column;
   justify-content: center;
-  min-height: 120vh;
-  z-index: 1;
+  /* gap: 30px; */
+  /* min-height: 120vh; */
+  /* z-index: 1; */
   position: relative;
-  padding: 20px 10px 150px 10px;
-  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.731);
+  padding-bottom: 50px;
+
+  /* padding: 20px 10px 150px 10px; */
+  /* box-shadow: 0 4px 25px rgba(0, 0, 0, 0.731); */
 }
 
-.upcoming .content {
+.upcoming .card-container {
   display: flex;
-  flex-direction: row;
-  gap: 40px;
+  flex-wrap: wrap;
+  /* grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); */
+  /* flex-direction: row; */
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
 }
 
-.upcoming .box {
-  background: cover;
-  background-color: rgba(0, 0, 0, 0.599);
-  max-width: 450px;
+.upcoming .card {
+  /* padding: 25px; */
+  color: white;
+  width: 400px;
+  box-shadow: 0 5px 25px rgba(135, 135, 135, 0.443);
+  background-color: rgba(0, 0, 0, 0.6);
+display: flex;
+flex-direction: column;
+
+  /* text-align: center; */
+}
+
+.upcoming .image-box {
+  /* object-fit: cover; */
+  /* width: 100%; */
+  /* height: 180px; */
+  display: flex;
+  justify-content: center;
+}
+
+.upcoming .image-box img {
+    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  filter: contrast(95%)
 }
 
 .upcoming .title {
-  align-content: center;
-  padding-top: 40px;
+  /* align-content: center; */
+  /* padding-top: 40px; */
 }
 
+.upcoming h3 {
+  font-size: 1.4rem;
+  /* text-align: center; */
+}
 .upcoming .h-title {
   color: white;
-  font-size: clamp(2rem, 5vw, 3rem);
-  text-align: center;
-  padding-bottom: 60px;
+  /* font-size: clamp(2rem, 5vw, 3rem); */
+  /* text-align: center; */
+  padding: 20px auto;
 }
 
-.upcoming .text p {
-  padding: 0px;
+.upcoming p {
+  /* padding: 0px; */
+  font-size: 1.1rem;
 }
 
-.upcoming .round-track {
+.upcoming .card-round-and-track {
   /* display: inline; */
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
 }
 
-.upcoming .upcoming-round {
+.upcoming .card-round {
   text-align: left;
-  margin-left: 15px;
-  font-weight: 300;
-  margin-top: 8px;
-  opacity: 60%;
+  /* padding-left: 0px; */
+  font-weight: 400;
+  /* margin-top: 8px; */
+  opacity: 90%;
 }
 
-.upcoming .upcoming-track {
+.upcoming .card-track {
   font-family: racing sans one;
-  font-size: 1.9em;
+  font-size: 1.7rem;
   color: red;
   text-align: right;
-  margin-top: 5px;
-  margin-right: 20px;
+  /* margin-top: 5px; */
+  /* margin-right: 20px; */
   text-decoration: underline;
 }
 
-.upcoming .upcoming-dates {
+.upcoming .card-dates {
   font-family: monospace;
-  font-size: 1.4em;
+  font-size: 1.1rem;
   text-align: right;
-  margin-right: 20px;
-  margin-bottom: 20px;
+  /* margin-right: 20px; */
+  /* margin-bottom: 20px; */
 }
 
 .upcoming-btn {
   color: white;
   font-family: racing sans one;
-  font-weight: 500;
-  letter-spacing: 1;
-  font-size: 1.6em;
+  /* font-weight: 500; */
+  /* letter-spacing: 1px; */
+  font-size: 1.6rem;
   text-decoration: none;
   letter-spacing: 1px;
-  transition: 0.5s;
+  transition: 0.3s;
   display: inline-block;
   padding: 20px;
 }
 
-.upcoming a:hover {
+.upcoming-btn:hover {
   color: red;
-}
-
-.upcoming .box img:hover {
-  filter: contrast(120%);
-}
-
-.upcoming .box #previous img {
-  filter: grayscale(100%) saturate(100%);
   transition: filter 0.3s ease;
 }
 
-.upcoming .box #previous img:hover {
-  filter: grayscale(0);
+/* ----> card = red */
+.upcoming .card:hover {
+  background: linear-gradient(black);
+  filter: contrast(110%);
+  transition: filter 0.3s ease;
 }
 
+.upcoming .card :hover {
+  color: red;
+  opacity: 100%;
+  transition: filter 0.3s ease;
+}
+
+/* ----> previous card */
 .upcoming #previous {
-  opacity: 75%;
+  opacity: 90%;
+  filter: grayscale(100%) saturate(100%) contrast(120%);
 }
 
-.upcoming #previous .upcoming-track {
-  color: rgb(159, 155, 155);
+/* ----> previous card: track   */
+#previous .card-track {
+  color: rgb(223, 220, 220);
+}
+
+/* ----> if hover, previous card  */
+#previous:hover {
+  background: #111111d2;
+  opacity: 100%;
+  filter: grayscale(0) saturate(100%) contrast(120%);
+  color: red;
+  transition: filter 0.3s ease;
+}
+
+/* ----> if hover, previous track  */
+#previous .card-track:hover {
+  color: red;
+  transition: filter 0.3s ease;
 }
 
 /* TEAMS SECTION _____________________________________________ */
@@ -246,79 +377,104 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  min-height: 100vh;
-  z-index: 1;
-  position: relative;
-}
-
-.teams .content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 20px;
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
+  /* min-height: 100vh; */
+  /* z-index: 1; */
+  position: relative;
+  padding-bottom: 50px;
 }
 
-.teams .box {
-  width: 100%;
-  max-width: 350px;
-  margin: 10px;
-  box-shadow: 0 5px 25px black;
+.teams .card-container {
+  /* align-items: center; */
+  display: flex;
+flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.teams .card {
+  box-shadow: 0 5px 25px rgba(135, 135, 135, 0.443);
+  background-color: rgba(0, 0, 0, 0.6);
+  /* display: flex; */
+  /* flex-direction: column; */
+  height: 360px;
+  /* max-width: 300px; */
+  width: 300px;
+  /* border-radius: 5px; */
+  /* overflow: hidden; */
+  /* aspect-ratio: 1/1; */
+  display: flex;
+  flex-direction: column;
 }
 
 .teams .image-box {
-  height: 300px;
+  height: 260px;
+  display: flex;
+  justify-content: center;
+
+  /* align-items: center; */
+}
+
+.teams .image-box img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .teams .h-title {
-  color: white;
-  font-size: clamp(2rem, 5vw, 3rem);
-  padding-bottom: 15px;
+  /* color: white; */
+  /* font-size: clamp(2rem, 5vw, 3rem); */
+  padding: 20px auto;
 }
 
 .teams #mercedes {
-  background-color: white;
+  background-color: rgb(231, 231, 231);
 }
 
 .teams .text {
-  font-family: racing sans one;
+  /* font-family: "racing sans one"; */
   color: white;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
-.teams .text h2 {
-  padding: 20px 5px;
+.teams h2 {
+  padding: 15px;
   color: white;
-  font-size: 1.6em;
+  text-align: center;
   letter-spacing: 1.5px;
+  font-family: "racing sans one";
+  /* font-size: 1.6rem; */
 }
 
 .teams-btn {
-  background-color: rgba(5, 5, 5, 0.254);
-  z-index: 1;
-  padding: 10px 60px;
+  background-color: rgba(5, 5, 5, 0.612);
+  /* z-index: 1; */
+  padding: 12px 40px;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 0.1px;
-  transition: 0.5s;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  letter-spacing: 0.3px;
+  transition: 0.3s;
+  margin: 60px auto 0;
+  /* margin-top: 50px; */
+  /* margin-bottom: 50px; */
   display: inline-block;
   border-radius: 8px;
   box-shadow: 0 5px 20px gray;
-  font-family: racing sans one;
-}
-
-.teams-btn {
+  /* font-family: "racing sans one"; */
   color: white;
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  /* font-size: clamp(1.2rem, 2.5vw, 1.6rem); */
 }
 
-.teams a:hover {
+.teams-btn:hover {
   color: red;
+  background: black;
+  transition: 0.3s;
 }
 
 /* CONTACT SECTION  _____________________________________________ */
@@ -327,8 +483,8 @@
   background:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)),
     url(https://i.postimg.cc/3wxNsFdm/dramatic_season_openers_header_webp.avif)
-      center/cover no-repeat;
-  z-index: -10;
+      center/cover;
+  z-index: -1;
   position: fixed;
   inset: 0;
   filter: opacity(90%);
@@ -336,41 +492,44 @@
 
 .contact {
   text-align: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  min-height: 100vh;
-  background-size: cover;
-  z-index: 1;
+  color: white;
+  /* align-items: center; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* width: 100%; */
+  /* min-height: 100vh; */
+  /* background-size: cover; */
+  /* z-index: 1; */
   position: relative;
 }
 
 .contact-form {
-  padding: 30px 40px;
+  padding: 30px;
   background: rgba(231, 2, 2, 0.66);
   box-shadow: 0 15px 20px black;
   border-radius: 10px;
-  width: 100%;
+  /* width: 100%; */
+  max-width: 500px;
+  margin: 40px auto 0;
 }
 
-.contact .h-title {
+/* .contact .h-title {
   color: white;
   font-size: clamp(2rem, 5vw, 3rem);
-}
+} */
 
-.contact .h-title span {
+/* .contact .h-title span {
   font-size: clamp(2rem, 5vw, 3rem);
-}
+} */
 
-.contact .title p {
+/* .contact .title p {
   color: white;
   font-family: roboto;
   letter-spacing: 0.5px;
   padding-bottom: 30px;
   font-size: 1.2em;
-}
+} */
 
 .contact-form h3 {
   /* "send a message" */
@@ -381,49 +540,53 @@
   font-weight: 300;
 }
 
-.contact-form .input-box {
+/* .contact-form .input-box {
   position: relative;
   margin-bottom: 20px;
-}
+} */
 
-.contact-form .input-box input,
-.contact-form .input-box textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 10px;
-  outline: none;
-  font-size: 16px;
-  font-weight: 300;
-  margin-right: 200px;
-  resize: none;
-}
-
-.contact-form .input-box textarea {
-  min-height: 20vh;
-}
-
-.contact-form .input-box input[type="submit"] {
-  font-size: 12pt;
-  color: rgb(81, 78, 78);
-  /* background: whitesmoke; */
-  display: inline-block;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 0.2px;
-  max-width: 110px;
-  transition: 0.5s;
-  font-weight: 800;
+  /* border: 1px solid black; */
   border: none;
+  border-radius: 8px;
+  padding: 12px;
+  /* outline: none; */
+  /* font-size: 16px; */
+  /* font-weight: 300; */
+  margin-bottom: 15px;
+  /* resize: none; */
+}
+
+.contact-form textarea {
+  min-height: 150px;
+}
+
+.contact-form input[type="submit"] {
+  font-size: 0.8rem;
+  /* color: rgb(81, 78, 78); */
+  background: whitesmoke;
+  /* display: inline-block; */
+  text-transform: uppercase;
+  /* text-decoration: none; */
+  /* letter-spacing: 0.2px; */
+  max-width: 100px;
+  /* transition: 0.3s; */
+  font-weight: bold;
+  /* border: none; */
   cursor: pointer;
-  padding: 5px;
-  margin-top: 20px;
-  text-align: center;
-  margin: 0px;
+  /* padding: 5px; */
+  /* margin-top: 20px; */
+  /* text-align: center; */
+  /* margin: 0px; */
 }
 
 form input[type="submit"]:hover {
-  color: red !important;
+  color: black;
+  border: none;
+  background: red;
+  transition: 0.3s;
 }
 
 /* ABOUT PAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -431,79 +594,114 @@ form input[type="submit"]:hover {
 .about {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  margin-top: 100px;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  align-items: center;
+  /* margin-top: 100px; */
+  gap: 50px;
+  /* padding: 10px 60px; */
 }
 
 .about .content {
-  flex-wrap: nowrap;
+  /* flex-wrap: nowrap; */
 }
 
 .about .box {
-  width: 100%;
+  /* width: 100%; */
+  /* flex: 1 1 400px; */
 }
 
 .about .image-box img {
-  max-width: 800px;
-  padding-top: 100px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  padding-top: 0px;
 }
 
-.about .p-title {
+.about .image-box {
+  flex: 1 1 400px;
+}
+
+.about .title {
+  flex: 1 1 400px;
+  padding: 0 40px;
+}
+
+.about .h-title {
+  text-align: left;
+  padding-bottom: 15px;
+}
+
+.about p {
   color: black;
-  font-family: "roboto";
-  font-size: 1.3em;
+  font-family: "roboto flex";
+  font-size: clamp (1rem, 1.4vw, 1.3rem);
   text-align: left;
   font-weight: 350;
   text-align: justify;
   letter-spacing: 0;
-  padding-right: 180px;
+  /* padding-right: 180px; */
+  /* padding-right: 0; */
 }
 
+/* ABOUT + MISSION WRAPPER _____________________________________________*/
 .about-and-mission {
-  box-shadow: 0 10px 20px rgb(4, 4, 4);
-  z-index: 1000;
-  padding-bottom: 60px;
+  box-shadow: 0 10px 20px rgba(4, 4, 4, 0.616);
+  /* padding-bottom: 30px; */
+  padding: 40px;
+  margin: 40px;
+  /* opacity: 95%; */
+  background: rgba(0, 0, 0, 0.084);
+  border-radius: 10px;
 }
+
 /* MISSION SECTION _____________________________________________ */
 .mission {
   /* align-items: center; */
-  text-align: center;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  margin: 80px 200px;
-  padding: 40px 80px 80px 80px;
-  box-shadow: 0 15px 16px gray;
-  border-radius: 10px;
-  background-color: rgba(10, 10, 10, 0.84);
+  flex-wrap: wrap; */
+  text-align: center;
+  margin: 30px;
+  padding: 40px;
+  /* max-width: 1500px; */
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.643);
+  border-radius: 12px;
+  color: white;
+  background: rgba(0, 0, 0, 0.845);
 }
 
 .mission .h-title {
-  color: white;
+  /* color: white; */
+  padding-bottom: 15px;
 }
 
 .mission .title .p-title {
   font-family: "russo one";
-  font-size: 1.2em;
-  color: white;
+  /* font-size: 1.2em; */
+  /* color: white; */
   letter-spacing: 0.5px;
   /* padding-top: 20px; */
 }
 
 .mission .title p {
-  font-family: "roboto";
-  font-size: 1.3em;
+  /* font-family: "roboto"; */
+  /* font-size: 1.3em; */
 }
 
 /* HISTORY SECTION _____________________________________________ */
 .history {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   justify-content: center;
-  min-height: 120vh;
-  z-index: 1;
+  min-height: 100vh;
+  /* z-index: 1; */
+  align-content: center;
+  text-align: center;
+  color: white;
   position: relative;
-  padding: 20px 10px 150px 10px;
+  /* padding: 60px auto; */
+  /* padding: 20px 10px 150px 10px; */
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.731);
 }
 
@@ -511,64 +709,46 @@ form input[type="submit"]:hover {
   content: "";
   background:
     linear-gradient(rgba(0, 0, 0, 0.4), rgb(0, 0, 0)),
-    url(https://i.postimg.cc/kX51ff3c/C62374B_W_webp.avif) center/cover
-      no-repeat;
-  z-index: -10;
-  background-size: cover;
+    url(https://i.postimg.cc/kX51ff3c/C62374B_W_webp.avif) center/cover;
+  z-index: -1;
+  /* background-size: cover; */
   position: absolute;
   inset: 0;
   filter: opacity(80%);
 }
 
-.history .content {
+.history .card-container {
   display: flex;
-  flex-direction: row;
-  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: auto;
+  /* line-height: 1.7; */
 }
 
-.history .box {
-  background: cover;
-  background-color: rgba(0, 0, 0, 0.599);
-  max-width: 450px;
-}
-
-.history .title {
-  align-content: center;
-  padding-top: 40px;
+.history .card {
+  width: 350px;
+  /* max-width: 900px; */
+  /* margin: auto; */
+  font-size: clamp(1rem, 1.3vw, 1.25rem);
 }
 
 .history .h-title {
-  color: black;
-  font-size: clamp(2rem, 5vw, 3rem);
-  text-align: center;
-  padding-bottom: 60px;
-}
-
-.history .text {
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-.history .text p {
-  font-family: roboto;
-  padding: 25px;
-  color: white;
-  font-size: clamp(1rem, 2vw, 1.4rem);
+  padding-bottom: 40px;
 }
 
 .history-btn {
   color: white;
-  font-family: racing sans one;
-  font-weight: 500;
-  letter-spacing: 1;
-  font-size: 1.6em;
-  text-decoration: none;
+  font-family: "racing sans one";
+  /* font-weight: 500; */
+  /* font-size: 1.6em; */
+  /* text-decoration: none; */
   letter-spacing: 1px;
-  transition: 0.5s;
-  display: inline-block;
+  transition: 0.3s;
+  /* display: inline-block; */
 }
 
-.history a:hover {
+.history-btn:hover {
   color: red;
 }
 
@@ -576,13 +756,16 @@ form input[type="submit"]:hover {
 
 .drivers {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
   justify-content: center;
-
+  /* color:white; */
   position: relative;
-  padding: 60px 10px 120px 10px;
+  /* padding: 60px 10px 120px 10px; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.385);
+  padding: 40px;
+  align-content: center;
+
 }
 
 .drivers::before {
@@ -590,192 +773,233 @@ form input[type="submit"]:hover {
   background:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(https://i.postimg.cc/mD0rFxVH/Getty_Images_2151452065_webp.avif)
-      center/cover no-repeat;
-  z-index: -10;
-  background-size: cover;
-  width: 100%;
+      center/cover;
+  z-index: -1;
+  /* background-size: cover; */
+  /* width: 100%; */
   position: absolute;
   inset: 0;
 }
 
-.drivers .content {
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
+.drivers .card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* flex-direction: row; */
+  gap: 30px;
+  /* align-items: center; */
 }
 
-.drivers .box {
-  max-width: 350px;
-  max-height: 580px;
+.drivers .card {
+  max-width: 320px;
+  max-height: 500px;
   /* border: 10px solid white; */
-  box-shadow: 0 5px 35px gray;
+  box-shadow: 0 5px 25px gray;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.557);
-  align-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  /* align-content: center; */
   text-align: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* border-radius: 5px; */
+  /* overflow: hidden; */
+  /* height: 460px; */
+}
+
+.drivers .image-box {
+  /* height: 260px; */
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+.drivers .image-box img {
+  object-fit: cover;
+  /* width: 80%; */
+  /* height: 80%; */
 }
 
 .drivers .title {
-  padding-bottom: 50px;
-  padding-top: 50px;
+  /* padding-bottom: 50px; */
+  /* padding-top: 50px; */
 }
 .drivers .h-title {
-  color: white;
+  /* color: white; */
+  padding-bottom: 40px;
 }
 
 .drivers .title p {
+  /* color: white; */
+}
+
+.drivers h2 {
+  padding: 15px;
   color: white;
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: "racing sans one";
 }
 
 .drivers .text p {
-  color: white;
-  font-family: "roboto";
-  padding: 20px 10px 25px 10px;
+  /* color: white; */
+  /* font-family: "roboto"; */
+  /* padding: 20px 10px 25px 10px; */
 }
 
-.drivers .text h2 {
+.drivers .text {
   color: white;
-  padding: 15px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* padding: 15px; */
 }
 
 .driver-btn {
   /* driver name in about page */
-  font-size: 1.6em;
+  font-size: 1.3rem;
   letter-spacing: 0.5px;
   font-family: "russo one";
-  font-weight: 900;
+  /* font-weight: 900; */
   color: white;
   text-decoration: none;
-  transition: 0.5s;
   display: inline-block;
-  vertical-align: top;
-  padding: 20px 20px;
-  text-align: center;
+  /* vertical-align: top; */
+  padding: 15px;
+  /* text-align: center; */
 }
 
-.drivers a:hover {
+.driver-btn:hover {
   color: red;
+  transition: 0.3s;
 }
 
 /* EVENTS PAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
 /* SCHEDULE SECTION _____________________________________________ */
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 8px;
+  color: white;
+  font-family: "poppins";
+  padding: 30px;
+}
+
+td,
+th {
+  padding: 15px;
+  border: 1px solid white;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
 table,
 td,
 th {
-  border: 1.2px solid white;
-  padding: 15px;
-  font-family: roboto flex;
-  letter-spacing: 1px;
-  color: white;
-  text-transform: uppercase;
-  font-size: 1em;
-  font-family: poppins;
-  border-spacing: 8px;
+  /* font-size: 1rem; */
 }
 
 .round {
   text-align: left;
   padding-left: 10px;
-  color: red;
+  color: rgb(235, 2, 2);
 }
 .tb-headers {
   color: rgb(202, 202, 202);
   border: 0px;
-  font-weight: 800;
-  letter-spacing: 0.6px;
-  vertical-align: bottom;
-  padding-bottom: 5px;
-  padding-top: 12px;
-  font-size: 1em;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+  /* vertical-align: bottom; */
+  padding-bottom: 3px;
+  padding-top: 0px;
+  /* font-size: 1rem; */
 }
 
 .schedule .h-title {
-  text-align: center;
-  padding: 50px 0px 30px 0px;
+  /* text-align: center; */
+  /* padding: 50px 0px 30px 0px; */
   color: white;
-  font-size: clamp(3rem, 5vw, 3.5rem);
-  font-family: racing sans one;
+  padding-bottom: 25px;
+  /* font-size: clamp(2rem, 5vw, 3.5rem); */
+  /* font-family: racing sans one; */
 }
 
 .race-schedule {
-  width: 100%;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.536);
-  box-shadow: 0 15px 15px black;
+  /* width: 100%; */
+  /* z-index: 1; */
+  background-color: rgba(0, 0, 0, 0.689);
+  box-shadow: 0 8px 20px black;
 }
 
 .schedule {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
   justify-content: center;
   flex-wrap: wrap;
-  align-items: center;
-  padding: 80px 20px;
-  width: 100%;
+  padding: 40px 80px;
+  /* padding: 80px 20px; */
+  /* width: 100%; */
 }
 
 .schedule::before {
   content: "";
   background:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.642)),
-    url(https://i.postimg.cc/Gp5GZdy1/1750720263_jpg.avif) center/cover
-      no-repeat;
-  z-index: -10;
+    url(https://i.postimg.cc/Gp5GZdy1/1750720263_jpg.avif) center/cover;
+  z-index: -1;
   position: fixed;
   inset: 0;
 }
 
 /* FOOTER !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .footer {
-  background: rgb(7, 7, 7);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px 0;
-  gap: 10px;
-  opacity: 90%;
+  background: black;
+  color: white;
+  /* width: 100%; */
+  /* display: flex; */
+  /* justify-content: center; */
+  text-align: center;
+  /* flex-direction: column; */
+  padding: 25px 15px;
+  /* gap: 10px; */
+  opacity: 80%;
 }
 
 .footer-links {
-  padding-top: 15px;
+  /* padding-top: 15px; */
 }
 
-.footer-links ul {
+.footer ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: center;
-  gap: 8px;
+  gap: 30px;
+  margin-bottom: 10px;
 }
 
-.footer-links li a {
+.footer a {
   color: white;
   text-decoration: none;
-  font-family: roboto flex;
-  font-weight: 300;
+  font-family: sans-serif;
+  /* font-weight: 300; */
 }
 
-.footer-links a:hover {
+.footer a:hover {
   color: red;
 }
 
 .footer .icons a {
-  color: white;
-  font-size: 2em;
-  padding: 5px;
-  z-index: 1;
-}
-
-.footer .icons a:hover {
-  color: red;
+  /* color: white; */
+  font-size: 1.8rem;
+  margin: 0 6px;
+  /* z-index: 1; */
 }
 
 .footer-credit {
   font-family: poppins;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   opacity: 70%;
 }
 
@@ -783,182 +1007,159 @@ th {
 
 @media (max-width: 1200px) {
   section {
-    padding: 40px;
+    /* padding: 40px; */
   }
 
   .h-title {
-    font-size: 28pt;
+    /* font-size: 28pt; */
   }
 
   .h-title span {
-    font-size: 32pt;
+    /* font-size: 32pt; */
   }
 
   .banner-content h2 {
-    font-size: 32pt;
+    /* font-size: 32pt; */
   }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 900px) {
+  section {
+    /* padding: 40px 30px; */
+  }
+
   .navbar {
     flex-direction: column;
     gap: 15px;
   }
 
   .navbar .navigation {
-    flex-wrap: wrap;
-    justify-content: center;
+    /* flex-wrap: wrap; */
+    /* justify-content: center; */
   }
 
-  .about .content {
+  .about {
     flex-direction: column;
     text-align: center;
   }
 
+  /* .about .content {
+    flex-direction: column;
+    text-align: center;
+  } */
+
   .about .title p {
-    padding: 15px 0 0 0;
+    /* padding: 15px 0 0 0; */
   }
 
   .h-title {
-    padding: 0 50px;
+    /* padding: 0 50px; */
   }
 
   .mission {
-    margin: 40px;
-    padding: 40px;
+    margin: 40px 20px;
+    /* padding: 30px 20px; */
   }
 
   .race-schedule {
-    width: 100%;
+    /* width: 100%; */
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 600px) {
+  section {
+    padding: 40px 20px;
+  }
+
+  .drivers .card .teams .card .history .card .upcoming .card {
+    width:100%;
+  }
+
+  .navbar {
+    align-items: flex-start;
+  }
+
+  .navigation {
+    justify-content: center;
+  }
+
   .banner-content {
-    padding: 60px 20px;
+    padding-top: 140px;
   }
 
   .banner-content h2 {
-    font-size: 28pt;
-  }
-
-  .teams .box {
-    min-width: 100%;
-    max-width: 100%;
+    /* font-size: 28pt; */
   }
 
   .contact-form {
-    min-width: unset;
-    padding: 20px;
+    /* min-width: unset; */
+    /* padding: 20px; */
   }
 
-  .about .content .image-box {
-    min-width: 100%;
+  .about {
+    /* gap: 20px; */
+  }
+
+  .about .image-box {
+    /* max-width: 100%; */
   }
 
   .history .title p {
-    font-size: 18pt;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar .logo {
-    font-size: 1.1em;
-  }
-
-  .navbar .navigation li a {
-    font-size: 1em;
+    /* font-size: 18pt; */
   }
 
   .h-title {
-    font-size: 1em;
+    /* font-size: 1.8rem; */
   }
 
   .h-title span {
-    font-size: 22pt;
+    /* font-size: 2.3rem; */
   }
 
+  .mission {
+    padding: 30px;
+  }
+  
+  
+.upcoming .card-container {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  /* section {
+    padding: 30px 15px;
+  } */
+
+  /* .navbar .navigation li a {
+    font-size: 1em;
+  } */
+
+  .h-title {
+    font-size: 1.6rem;
+  }
+
+  .h-title span {
+    font-size: 2rem;
+  }
+  /* 
   .driver-btn {
     font-size: 16pt;
-  }
+  } */
 
-  .teams-btn {
+  /* .teams-btn {
     font-size: 18pt;
     padding: 10px 20px;
-  }
-}
+  } */
 
-/* GENERAL FORMAT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+  /* .about .p-title {
+    font-size: 1rem;
+  } */
 
-section {
-  padding: 60px 80px;
-  align-items: center;
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Section Titles */
-p {
-  font-weight: 300;
-  color: white;
-  font-family: roboto;
-}
-
-.title {
-  padding-bottom: 10px;
-}
-.h-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 100;
-  font-family: "racing sans one";
-}
-
-.h-title span {
-  color: red;
-  font-weight: 700;
-  font-size: clamp(3rem, 5vw, 3.5rem);
-  font-family: "racing sans one";
-}
-
-.title p {
-  font-family: roboto;
-  letter-spacing: 0.3px;
-  font-size: 1em;
-  padding-top: 10px;
-}
-
-/* Content text  */
-.text h2 {
-  color: white;
-  font-family: racing sans one;
-  font-size: 1.3em;
-  text-align: center;
-  letter-spacing: 1px;
-}
-.text p {
-  text-align: center;
-  color: white;
-  letter-spacing: 0.1px;
-  padding-top: 18px;
-  font-family: "roboto";
-  font-size: 1.1em;
-  margin-top: 10px;
+  /* .mission {
+    padding: 20px 15px;
+  } */
 }
