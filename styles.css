@@ -55,6 +55,10 @@ p {
   font-weight: 300;
 }
 
+.title, #s-title {
+  padding-bottom: 40px; 
+}
+
 /* CARD */
 
 .card-container {
@@ -133,35 +137,33 @@ p {
 /* BANNER SECTION _____________________________________________ */
 .banner {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
-  /* align-items: center; */
   height: 100%;
   min-height: 100vh;
   z-index: 10;
   position: relative;
-  box-shadow: 0 5px 20px gray;
-  /* margin-top: 0px; */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.619);
+  text-align: center;
 }
 
-.banner::before {
+/* .banner::before {
   content: "";
   background:
     linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
     url(https://i.postimg.cc/wTYhkG6C/f1-banner4.avif) center/cover;
-  /* background-size: cover; */
+  background-size: fit;
   position: absolute;
   z-index: -1;
   inset: 0;
-  /* height: 100%; */
+  height: 100%;
   object-fit: cover;
-}
+} */
 
 .banner-content {
-  /* max-width: 900px; */
+   max-width: 900px; */
   text-align: center;
   padding: 100px 20px;
-  /* z-index: 1; */
+   z-index: 1; */
 }
 
 .banner h2 {
@@ -182,7 +184,6 @@ p {
   font-size: clamp(1rem, 2vw, 1.4rem);
   color: white;
   margin: 20px auto;
-  /* letter-spacing: 0.3px; */
   font-family: "fjalla one";
   max-width: 800px;
 }
@@ -204,7 +205,7 @@ p {
 }
 
 .banner-btn:hover {
-  /* CHANGE HOVER IN ALL BUTTONS TO THIS FORMAT******* */
+   CHANGE HOVER IN ALL BUTTONS TO THIS FORMAT******* */
   color: red;
   background: white;
 }
@@ -212,45 +213,28 @@ p {
 /* UPCOMING EVENTS SECTION _____________________________________________ */
 .upcoming {
   display: flex;
-  /* text-align: center; */
   flex-direction: column;
   justify-content: center;
-  /* gap: 30px; */
-  /* min-height: 120vh; */
-  /* z-index: 1; */
   position: relative;
-  padding-bottom: 50px;
-
-  /* padding: 20px 10px 150px 10px; */
-  /* box-shadow: 0 4px 25px rgba(0, 0, 0, 0.731); */
 }
 
 .upcoming .card-container {
   display: flex;
   flex-wrap: wrap;
-  /* grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); */
-  /* flex-direction: row; */
   justify-content: center;
   gap: 30px;
-  /* margin-top: 40px; */
 }
 
 .upcoming .card {
-  /* padding: 25px; */
   color: white;
   width: 400px;
   box-shadow: 0 5px 25px rgba(135, 135, 135, 0.443);
   background-color: rgba(0, 0, 0, 0.6);
-display: flex;
-flex-direction: column;
-
-  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
 }
 
 .upcoming .image-box {
-  /* object-fit: cover; */
-  /* width: 100%; */
-  /* height: 180px; */
   display: flex;
   justify-content: center;
 }
@@ -262,40 +246,23 @@ flex-direction: column;
   filter: contrast(95%)
 }
 
-.upcoming .title {
-  /* align-content: center; */
-  /* padding-top: 40px; */
-}
 
 .upcoming h3 {
   font-size: 1.4rem;
-  /* text-align: center; */
 }
 .upcoming .h-title {
   color: white;
-  /* font-size: clamp(2rem, 5vw, 3rem); */
-  /* text-align: center; */
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding-top: 60px;
 }
 
 .upcoming p {
-  /* padding: 0px; */
   font-size: 1.1rem;
 }
 
-.upcoming .card-round-and-track {
-  /* display: inline; */
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* justify-content: space-between; */
-}
 
 .upcoming .card-round {
   text-align: left;
-  /* padding-left: 0px; */
   font-weight: 400;
-  /* margin-top: 8px; */
   opacity: 90%;
 }
 
@@ -304,8 +271,6 @@ flex-direction: column;
   font-size: 1.7rem;
   color: red;
   text-align: right;
-  /* margin-top: 5px; */
-  /* margin-right: 20px; */
   text-decoration: underline;
 }
 
@@ -313,15 +278,11 @@ flex-direction: column;
   font-family: monospace;
   font-size: 1.1rem;
   text-align: right;
-  /* margin-right: 20px; */
-  /* margin-bottom: 20px; */
 }
 
 .upcoming-btn {
   color: white;
   font-family: racing sans one;
-  /* font-weight: 500; */
-  /* letter-spacing: 1px; */
   font-size: 1.6rem;
   text-decoration: none;
   letter-spacing: 1px;
@@ -380,16 +341,11 @@ flex-direction: column;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* flex-wrap: wrap; */
-  /* width: 100%; */
-  /* min-height: 100vh; */
-  /* z-index: 1; */
   position: relative;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 .teams .card-container {
-  /* align-items: center; */
   display: flex;
 flex-wrap: wrap;
   justify-content: center;
@@ -399,14 +355,8 @@ flex-wrap: wrap;
 .teams .card {
   box-shadow: 0 5px 25px rgba(135, 135, 135, 0.443);
   background-color: rgba(0, 0, 0, 0.6);
-  /* display: flex; */
-  /* flex-direction: column; */
   height: 360px;
-  /* max-width: 300px; */
   width: 300px;
-  /* border-radius: 5px; */
-  /* overflow: hidden; */
-  /* aspect-ratio: 1/1; */
   display: flex;
   flex-direction: column;
 }
@@ -415,8 +365,6 @@ flex-wrap: wrap;
   height: 260px;
   display: flex;
   justify-content: center;
-
-  /* align-items: center; */
 }
 
 .teams .image-box img {
@@ -426,10 +374,7 @@ flex-wrap: wrap;
 }
 
 .teams .h-title {
-  /* color: white; */
-  /* font-size: clamp(2rem, 5vw, 3rem); */
   padding-top: 80px;
-  padding-bottom: 30px;
 }
 
 .teams #mercedes {
@@ -437,7 +382,6 @@ flex-wrap: wrap;
 }
 
 .teams .text {
-  /* font-family: "racing sans one"; */
   color: white;
   flex: 1;
   display: flex;
@@ -452,7 +396,6 @@ flex-wrap: wrap;
   text-align: center;
   letter-spacing: 1.5px;
   font-family: "racing sans one";
-  /* font-size: 1.6rem; */
 }
 
 .teams-btn {
@@ -464,12 +407,9 @@ flex-wrap: wrap;
   letter-spacing: 0.3px;
   transition: 0.3s;
   margin: 60px auto 0;
-  /* margin-top: 50px; */
-  /* margin-bottom: 50px; */
   display: inline-block;
   border-radius: 8px;
   box-shadow: 0 5px 20px gray;
-  /* font-family: "racing sans one"; */
   color: white;
   font-size: clamp(1.2rem, 2.5vw, 1.6rem);
 }
@@ -481,7 +421,6 @@ flex-wrap: wrap;
 }
 
 /* CONTACT SECTION  _____________________________________________ */
-
 .teams-and-contact::before {
   content: "";
   background:
@@ -497,14 +436,6 @@ flex-wrap: wrap;
 .contact {
   text-align: center;
   color: white;
-  /* align-items: center; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* justify-content: center; */
-  /* width: 100%; */
-  /* min-height: 100vh; */
-  /* background-size: cover; */
-  /* z-index: 1; */
   position: relative;
 }
 
@@ -513,28 +444,13 @@ flex-wrap: wrap;
   background: rgba(231, 2, 2, 0.66);
   box-shadow: 0 15px 20px black;
   border-radius: 10px;
-  /* width: 100%; */
   max-width: 500px;
   margin: 40px auto 0;
 }
 
 .contact .h-title {
   padding-top: 80px;
-  /* color: white; */
-  /* font-size: clamp(2rem, 5vw, 3rem); */
 }
-
-/* .contact .h-title span {
-  font-size: clamp(2rem, 5vw, 3rem);
-} */
-
-/* .contact .title p {
-  color: white;
-  font-family: roboto;
-  letter-spacing: 0.5px;
-  padding-bottom: 30px;
-  font-size: 1.2em;
-} */
 
 .contact-form h3 {
   /* "send a message" */
@@ -545,23 +461,15 @@ flex-wrap: wrap;
   font-weight: 300;
 }
 
-/* .contact-form .input-box {
-  position: relative;
-  margin-bottom: 20px;
-} */
-
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  /* border: 1px solid black; */
+  border: 1px solid black;
   border: none;
   border-radius: 8px;
   padding: 12px;
-  /* outline: none; */
-  /* font-size: 16px; */
-  /* font-weight: 300; */
+  font-size: 1rem;
   margin-bottom: 15px;
-  /* resize: none; */
 }
 
 .contact-form textarea {
@@ -570,21 +478,12 @@ flex-wrap: wrap;
 
 .contact-form input[type="submit"] {
   font-size: 0.8rem;
-  /* color: rgb(81, 78, 78); */
   background: whitesmoke;
-  /* display: inline-block; */
   text-transform: uppercase;
-  /* text-decoration: none; */
-  /* letter-spacing: 0.2px; */
   max-width: 130px;
-  /* transition: 0.3s; */
+  transition: 0.3s;
   font-weight: bold;
-  /* border: none; */
   cursor: pointer;
-  /* padding: 5px; */
-  /* margin-top: 20px; */
-  /* text-align: center; */
-  /* margin: 0px; */
 }
 
 form input[type="submit"]:hover {
@@ -595,25 +494,12 @@ form input[type="submit"]:hover {
 }
 
 /* ABOUT PAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
 .about {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  /* justify-content: center; */
   align-items: center;
-  /* margin-top: 100px; */
   gap: 50px;
-  /* padding: 10px 60px; */
-}
-
-.about .content {
-  /* flex-wrap: nowrap; */
-}
-
-.about .box {
-  /* width: 100%; */
-  /* flex: 1 1 400px; */
 }
 
 .about .image-box img {
@@ -645,68 +531,48 @@ form input[type="submit"]:hover {
   font-weight: 350;
   text-align: justify;
   letter-spacing: 0;
-  /* padding-right: 180px; */
-  /* padding-right: 0; */
 }
 
 /* ABOUT + MISSION WRAPPER _____________________________________________*/
 .about-and-mission {
   box-shadow: 0 10px 20px rgb(4, 4, 4);
-  /* padding-bottom: 30px; */
   padding: 40px;
   margin: 40px;
-  /* opacity: 95%; */
-  background: rgba(0, 0, 0, 0.278);
+  background: rgba(0, 0, 0, 0.11);
   border-radius: 5px;
 }
 
 /* MISSION SECTION _____________________________________________ */
 .mission {
-  /* align-items: center; */
-  /* display: flex;
-  justify-content: center;
-  flex-wrap: wrap; */
   text-align: center;
   margin: 30px;
   padding: 40px;
-  /* max-width: 1500px; */
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.643);
   border-radius: 12px;
   color: white;
-  background: rgba(0, 0, 0, 0.845);
+  background: rgba(0, 0, 0, 0.777);
 }
 
 .mission .h-title {
-  /* color: white; */
   padding-bottom: 15px;
 }
 
 .mission .title .p-title {
   font-family: "russo one";
-  /* font-size: 1.2em; */
-  /* color: white; */
   letter-spacing: 0.5px;
-  /* padding-top: 20px; */
 }
 
 .mission .title p {
-  /* font-family: "roboto"; */
-  /* font-size: 1.3em; */
 }
 
 /* HISTORY SECTION _____________________________________________ */
 .history {
-  /* display: flex; */
-  /* flex-direction: column; */
   justify-content: center;
   min-height: 100vh;
-  /* z-index: 1; */
   align-content: center;
   text-align: center;
   color: white;
   position: relative;
-  /* padding: 60px auto; */
-  /* padding: 20px 10px 150px 10px; */
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.731);
 }
 
@@ -716,7 +582,6 @@ form input[type="submit"]:hover {
     linear-gradient(rgba(0, 0, 0, 0.4), rgb(0, 0, 0)),
     url(https://i.postimg.cc/kX51ff3c/C62374B_W_webp.avif) center/cover;
   z-index: -1;
-  /* background-size: cover; */
   position: absolute;
   inset: 0;
   filter: opacity(80%);
@@ -728,18 +593,14 @@ form input[type="submit"]:hover {
   justify-content: center;
   gap: 30px;
   margin: auto;
-  /* line-height: 1.7; */
 }
 
 .history .card {
   width: 350px;
-  /* max-width: 900px; */
-  /* margin: auto; */
   font-size: clamp(1rem, 1.3vw, 1.25rem);
 }
 
 .history .h-title {
-  padding-bottom: 40px;
 }
 
 .history .card-text {
@@ -753,12 +614,9 @@ form input[type="submit"]:hover {
 .history-btn {
   color: white;
   font-family: "racing sans one";
-  /* font-weight: 500; */
   font-size: 1.5em;
-  /* text-decoration: none; */
   letter-spacing: 1px;
   transition: 0.5s;
-  /* display: inline-block; */
 }
 
 .history-btn:hover {
@@ -766,15 +624,10 @@ form input[type="submit"]:hover {
 }
 
 /* MEET THE DRIVERS SECTION _____________________________________________ */
-
 .drivers {
   min-height: 100vh;
-  /* display: flex; */
-  /* flex-direction: column; */
   justify-content: center;
-  /* color:white; */
   position: relative;
-  /* padding: 60px 10px 120px 10px; */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.385);
   padding: 40px;
   align-content: center;
@@ -788,8 +641,6 @@ form input[type="submit"]:hover {
     url(https://i.postimg.cc/mD0rFxVH/Getty_Images_2151452065_webp.avif)
       center/cover;
   z-index: -1;
-  /* background-size: cover; */
-  /* width: 100%; */
   position: absolute;
   inset: 0;
 }
@@ -797,50 +648,21 @@ form input[type="submit"]:hover {
 .drivers .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* flex-direction: row; */
   gap: 30px;
-  /* align-items: center; */
 }
 
 .drivers .card {
   max-width: 320px;
   max-height: 500px;
-  /* border: 10px solid white; */
   box-shadow: 0 5px 25px gray;
   padding: 20px;
   background: rgba(0, 0, 0, 0.6);
-  /* align-content: center; */
   text-align: center;
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* border-radius: 5px; */
-  /* overflow: hidden; */
-  /* height: 460px; */
 }
 
-.drivers .image-box {
-  /* height: 260px; */
-  /* display: flex; */
-  /* justify-content: center; */
-}
 
 .drivers .image-box img {
   object-fit: cover;
-  /* width: 80%; */
-  /* height: 80%; */
-}
-
-.drivers .title {
-  /* padding-bottom: 50px; */
-  /* padding-top: 50px; */
-}
-.drivers .h-title {
-  /* color: white; */
-  padding-bottom: 40px;
-}
-
-.drivers .title p {
-  /* color: white; */
 }
 
 .drivers h2 {
@@ -851,11 +673,6 @@ form input[type="submit"]:hover {
   font-family: "racing sans one";
 }
 
-.drivers .text p {
-  /* color: white; */
-  /* font-family: "roboto"; */
-  /* padding: 20px 10px 25px 10px; */
-}
 
 .drivers .text {
   color: white;
@@ -865,21 +682,18 @@ form input[type="submit"]:hover {
   align-items: center;
   text-align: center;
   justify-content: center;
-  /* padding: 15px; */
+
 }
 
+ /* ---> driver name in about page */
 .driver-btn {
-  /* driver name in about page */
   font-size: 1.3rem;
   letter-spacing: 0.5px;
   font-family: "russo one";
-  /* font-weight: 900; */
   color: white;
   text-decoration: none;
   display: inline-block;
-  /* vertical-align: top; */
   padding: 15px;
-  /* text-align: center; */
 }
 
 .driver-btn:hover {
@@ -888,9 +702,7 @@ form input[type="submit"]:hover {
 }
 
 /* EVENTS PAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
 /* SCHEDULE SECTION _____________________________________________ */
-
 table {
   width: 100%;
   border-collapse: separate;
@@ -907,11 +719,6 @@ th {
   text-transform: uppercase;
   letter-spacing: 0.2px;
 }
-table,
-td,
-th {
-  /* font-size: 1rem; */
-}
 
 .round {
   text-align: left;
@@ -923,36 +730,25 @@ th {
   border: 0px;
   font-weight: bold;
   letter-spacing: 0.4px;
-  /* vertical-align: bottom; */
   padding-bottom: 3px;
   padding-top: 0px;
-  /* font-size: 1rem; */
 }
 
 .schedule .h-title {
-  /* text-align: center; */
-  /* padding: 50px 0px 30px 0px; */
   color: white;
   padding-bottom: 25px;
-  /* font-size: clamp(2rem, 5vw, 3.5rem); */
-  /* font-family: racing sans one; */
 }
 
 .race-schedule {
-  /* width: 100%; */
-  /* z-index: 1; */
   background-color: rgba(0, 0, 0, 0.689);
   box-shadow: 0 8px 20px black;
 }
 
 .schedule {
   display: flex;
-  /* flex-direction: column; */
   justify-content: center;
   flex-wrap: wrap;
   padding: 40px 80px;
-  /* padding: 80px 20px; */
-  /* width: 100%; */
 }
 
 .schedule::before {
@@ -969,24 +765,14 @@ th {
 .footer {
   background: black;
   color: white;
-  /* width: 100%; */
-  /* display: flex; */
-  /* justify-content: center; */
   text-align: center;
-  /* flex-direction: column; */
   padding: 25px 15px;
-  /* gap: 10px; */
   opacity: 80%;
-}
-
-.footer-links {
-  /* padding-top: 15px; */
 }
 
 .footer ul {
   list-style: none;
   display: flex;
-  /* flex-direction: row; */
   justify-content: center;
   gap: 30px;
   margin-bottom: 10px;
@@ -996,7 +782,6 @@ th {
   color: white;
   text-decoration: none;
   font-family: sans-serif;
-  /* font-weight: 300; */
 }
 
 .footer a:hover {
@@ -1004,10 +789,8 @@ th {
 }
 
 .footer .icons a {
-  /* color: white; */
   font-size: 1.8rem;
   margin: 0 6px;
-  /* z-index: 1; */
 }
 
 .footer-credit {
@@ -1017,38 +800,15 @@ th {
 }
 
 /* MEDIA QUERIES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-
-@media (max-width: 1200px) {
-  section {
-    /* padding: 40px; */
-  }
-
-  .h-title {
-    /* font-size: 28pt; */
-  }
-
-  .h-title span {
-    /* font-size: 32pt; */
-  }
-
-  .banner-content h2 {
-    /* font-size: 32pt; */
-  }
-}
-
 @media (max-width: 900px) {
-  section {
-    /* padding: 40px 30px; */
-  }
-
   .navbar {
     flex-direction: column;
     gap: 15px;
   }
 
   .navbar .navigation {
-    /* flex-wrap: wrap; */
-    /* justify-content: center; */
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .about {
@@ -1056,36 +816,22 @@ th {
     text-align: center;
   }
 
-  /* .about .content {
-    flex-direction: column;
-    text-align: center;
-  } */
-
-  .about .title p {
-    /* padding: 15px 0 0 0; */
-  }
-
-  .h-title {
-    /* padding: 0 50px; */
-  }
-
   .mission {
     margin: 40px 20px;
-    /* padding: 30px 20px; */
-  }
-
-  .race-schedule {
-    /* width: 100%; */
   }
 }
 
 @media (min-width: 600px) {
-  section {
-    padding: 40px 20px;
-  }
 
   .drivers .card .teams .card .history .card .upcoming .card {
     width:100%;
+  }
+
+
+  .drivers {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
   }
 
   .navbar {
@@ -1098,44 +844,23 @@ th {
 
   .banner-content {
     padding-top: 140px;
+
   }
 
-  .banner-content h2 {
-    /* font-size: 28pt; */
+  .about .h-title {
+    text-align: center;
   }
 
-  .contact-form {
-    /* min-width: unset; */
-    /* padding: 20px; */
+  .schedule {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   }
 
-  .about {
-    /* gap: 20px; */
+  footer {
+    position: relative;
+    width: 100%;
   }
-
-  .about .image-box {
-    /* max-width: 100%; */
-  }
-
-  .history .title p {
-    /* font-size: 18pt; */
-  }
-
-  .h-title {
-    /* font-size: 1.8rem; */
-  }
-
-  .h-title span {
-    /* font-size: 2.3rem; */
-  }
-
-  .mission {
-    padding: 30px;
-  }
-  
-  
-.upcoming .card-container {
-  grid-template-columns: 1fr;
 }
 
 @media (max-width: 480px) {
@@ -1143,13 +868,19 @@ th {
     font-size: 1.2rem;
   }
 
-  /* section {
-    padding: 30px 15px;
-  } */
+  section {
+    padding: 30px;
+  }
 
-  /* .navbar .navigation li a {
-    font-size: 1em;
-  } */
+  .navbar {
+    padding: 10px;
+  }
+
+  .navbar {
+    font-size: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   .h-title {
     font-size: 1.6rem;
@@ -1158,21 +889,8 @@ th {
   .h-title span {
     font-size: 2rem;
   }
-  /* 
-  .driver-btn {
-    font-size: 16pt;
-  } */
 
-  /* .teams-btn {
-    font-size: 18pt;
-    padding: 10px 20px;
-  } */
-
-  /* .about .p-title {
-    font-size: 1rem;
-  } */
-
-  /* .mission {
+  .mission {
     padding: 20px 15px;
-  } */
+  }
 }
