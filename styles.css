@@ -26,7 +26,8 @@ section {
   min-height: auto;
 }
 
-.about .mission {
+.about,
+.mission {
   padding: clamp(40px, 6vw, 90px) clamp(20px, 5vw, 80px);
   min-height: auto;
 }
@@ -539,7 +540,7 @@ form input[type="submit"]:hover {
   text-align: center;
   position: relative;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.848);
-  height: auto;
+  min-height: 100vh;
 }
 
 .history::before {
@@ -596,7 +597,7 @@ form input[type="submit"]:hover {
   justify-content: center;
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.385);
-  /* padding: 40px; */
+  padding: 40px;
   align-content: center;
   height: auto;
 }
@@ -805,7 +806,8 @@ th {
     min-height: auto;
   }
 
-  .about .mission {
+  .about,
+  .mission {
     min-height: auto;
   }
 
@@ -862,10 +864,11 @@ th {
 
   section {
     padding: 30px;
-    min-height: auto;
+    min-height: 100vw;
   }
 
-  .about .mission {
+  .about,
+  .mission {
     padding: 30px;
     min-height: auto;
   }
