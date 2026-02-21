@@ -768,7 +768,7 @@ th {
 /* === desktop: 1200px === */
 @media (max-width: 1200px) {
   section {
-    padding: clamp (60px, 6vw, 100px);
+    padding: clamp(60px, 6vw, 100px);
   }
 
   .navbar {
