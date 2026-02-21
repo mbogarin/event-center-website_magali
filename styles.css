@@ -15,14 +15,8 @@ body {
   background: rgba(0, 0, 0, 0.11);
 }
 
-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
 section {
-  padding: clamp(40px, 6vw, 90px) clamp(20px, 5vw, 80px);
+  padding: clamp(40px, 6vw, 80px) clamp(20px, 5vw, 80px);
   min-height: auto;
 }
 
@@ -30,57 +24,96 @@ section {
 .mission {
   padding: clamp(40px, 6vw, 90px) clamp(20px, 5vw, 80px);
   min-height: auto;
+  display: flex;
+  align-items: center;
 }
+
+.about-and-mission
 
 /* FLEXBOX */
 .content {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
-}
-
-/* GENERAL TEXT FORMAT */
-.h-title {
-  font-family: "Racing Sans One";
-  font-weight: 100;
-  font-size: clamp(2rem, 4vw, 3rem);
-  text-align: center;
-}
-
-.h-title span {
-  color: red;
-  font-size: clamp(2.4rem, 5vw, 3.5rem);
-}
-
-p {
-  font-family: "Roboto";
-  font-weight: 300;
-}
-
-.title {
-  padding-bottom: 40px;
+  gap: 50px;
 }
 
 /* CARD */
-
 .card-container {
+  display: flex;
+  flex-wrap: wrap;
   color: white;
+  justify-content: center;
+  gap: clamp(15px, 2vw, 30px);
 }
 
 .card {
   display: flex;
   flex-direction: column;
+  flex: 1 1 280px;
   background: rgba(0, 0, 0, 0.65);
+  box-shadow: 0 5px 25px rgba(135, 135, 135, 0.443);
   border-radius: 5px;
   overflow: hidden;
-  height: 100%;
   max-width: 420px;
+  transition: 0.3s;
+  color: white;
+}
+
+.card:hover {
+  background: rgba(0, 0, 0, 0.848);
+  filter: contrast(110%);
 }
 
 .card-text {
   padding: 20px;
   text-align: center;
+}
+
+/* Paddings/Margins */
+.contact {
+  margin-bottom: 80px;
+}
+
+.history,
+.drivers,
+.card-container {
+  padding-bottom: 80px;
+}
+
+/* IMAGES */
+img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* GENERAL HEADINGS & TEXT FORMAT */
+.title {
+  padding-bottom: 25px;
+  padding-top: 80px;
+}
+
+#about-title,
+#mission-title {
+  padding: 0;
+}
+
+.h-title {
+  font-family: "Racing Sans One";
+  font-weight: 100;
+  font-size: clamp(2.1rem, 4vw, 3rem);
+  text-align: center;
+}
+
+.h-title span {
+  color: red;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+p {
+  font-family: "Roboto";
+  font-weight: 300;
 }
 
 /* HOME PAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
@@ -199,22 +232,6 @@ p {
   position: relative;
 }
 
-.upcoming .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.upcoming .card {
-  color: white;
-  width: 400px;
-  box-shadow: 0 5px 25px rgba(135, 135, 135, 0.443);
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  flex-direction: column;
-}
-
 .upcoming .image-box {
   display: flex;
   justify-content: center;
@@ -232,7 +249,6 @@ p {
 }
 .upcoming .h-title {
   color: white;
-  padding-top: 60px;
 }
 
 .upcoming p {
@@ -321,23 +337,12 @@ p {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding-bottom: 60px;
-}
-
-.teams .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
 }
 
 .teams .card {
-  box-shadow: 0 5px 25px rgba(135, 135, 135, 0.443);
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.45);
   height: 360px;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
+  max-width: 300px;
 }
 
 .teams .image-box {
@@ -350,10 +355,6 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.teams .h-title {
-  padding-top: 80px;
 }
 
 .teams #mercedes {
@@ -385,7 +386,6 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.3px;
   transition: 0.3s;
-  margin: 60px auto 0;
   display: inline-block;
   border-radius: 8px;
   box-shadow: 0 5px 20px gray;
@@ -424,11 +424,7 @@ p {
   box-shadow: 0 15px 20px black;
   border-radius: 10px;
   max-width: 500px;
-  margin: 40px auto 0;
-}
-
-.contact .h-title {
-  padding-top: 80px;
+  margin: 0px auto;
 }
 
 .contact-form h3 {
@@ -474,18 +470,21 @@ form input[type="submit"]:hover {
 
 /* ABOUT PAGE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 .about {
-  display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   align-items: center;
   gap: 50px;
+  justify-content: space-between;
+}
+
+.about .content {
+  padding: 0 40px;
 }
 
 .about .image-box img {
   width: 100%;
   max-width: 500px;
   height: auto;
-  padding-top: 0px;
+  padding-top: 40px;
 }
 
 .about .image-box {
@@ -516,7 +515,8 @@ form input[type="submit"]:hover {
 .mission {
   text-align: center;
   align-content: center;
-  margin: 0 70px 80px 70px;
+  /* margin: 0 70px 80px 70px; */
+  margin: 20px 80px 80px 80px;
   padding: 60px;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.643);
   border-radius: 12px;
@@ -535,9 +535,11 @@ form input[type="submit"]:hover {
 
 /* HISTORY SECTION _____________________________________________ */
 .history {
-  justify-content: center;
-  align-content: center;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.848);
   min-height: 100vh;
@@ -555,17 +557,9 @@ form input[type="submit"]:hover {
   filter: opacity(80%);
 }
 
-.history .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin: auto;
-}
-
 .history .card {
-  width: 350px;
   font-size: clamp(1rem, 1.3vw, 1.25rem);
+  max-width: 360px;
 }
 
 .history .h-title {
@@ -594,12 +588,13 @@ form input[type="submit"]:hover {
 
 /* MEET THE DRIVERS SECTION _____________________________________________ */
 .drivers {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   position: relative;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.385);
   padding: 40px;
-  align-content: center;
-  height: auto;
+  align-items: center;
 }
 
 .drivers::before {
@@ -613,17 +608,9 @@ form input[type="submit"]:hover {
   inset: 0;
 }
 
-.drivers .card-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-  margin: auto;
-}
-
 .drivers .card {
   max-width: 320px;
-  max-height: 500px;
+  max-height: 550px;
   box-shadow: 0 5px 25px gray;
   padding: 20px;
   background: rgba(0, 0, 0, 0.3);
@@ -635,7 +622,7 @@ form input[type="submit"]:hover {
 }
 
 .drivers h2 {
-  padding: 15px;
+  padding: 15px 5px 5px 5px;
   color: white;
   text-align: center;
   letter-spacing: 1px;
@@ -675,6 +662,7 @@ form input[type="submit"]:hover {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  top: 0;
 }
 
 .schedule::before {
@@ -724,6 +712,10 @@ th {
   padding-top: 0px;
 }
 
+.schedule .title {
+  top: 0;
+}
+
 .schedule .h-title {
   color: white;
 }
@@ -770,10 +762,16 @@ th {
   padding-bottom: 10px;
 }
 
-/* MEDIA QUERIES !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-@media (max-width: 900px) {
+/* ====================================================================
+=== MEDIA QUERIES
+======================================================================= */
+/* === desktop: 1200px === */
+@media (max-width: 1200px) {
+  section {
+    padding: clamp (60px, 6vw, 100px);
+  }
+
   .navbar {
-    flex-direction: column;
     gap: 15px;
   }
 
@@ -783,36 +781,45 @@ th {
   }
 
   .about {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
   }
 
-  .about p-text {
-    padding-right: 0px;
-  }
-
-  .mission {
-    margin: 40px 20px;
+  .about .p-title {
+    padding-right: 10px;
   }
 
   footer {
     bottom: 0;
     width: 100%;
   }
+
+  .title {
+    padding-bottom: 35px;
+  }
+
+  .schedule {
+    margin: 0 60px;
+    padding-top: 0;
+    top: 0;
+  }
+
+  .schedule .title {
+    padding: 10px;
+    top: 0;
+  }
 }
 
-@media (min-width: 600px) {
+/* === tablet: 768px === */
+@media (max-width: 768px) {
   section {
-    min-height: auto;
+    min-height: 100vh;
+    flex: 1 1 100%;
+    max-width: 100%;
   }
 
-  .about,
-  .mission {
-    min-height: auto;
-  }
-
-  .drivers .card .teams .card .history .card .upcoming .card {
+  .card {
     width: 100%;
+    max-width: 420px;
   }
 
   .drivers {
@@ -822,25 +829,31 @@ th {
   }
 
   .navbar {
+    flex-direction: column;
+    align-items: center;
     align-items: flex-start;
   }
 
-  .navigation {
-    justify-content: center;
+  .about {
+    flex-direction: row;
   }
 
-  .about-and-mission {
-    padding: 0;
+  .schedule .title {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0 20px 0;
   }
 
   .schedule {
-    display: flex;
-    flex-wrap: wrap;
+    margin: 0 80px;
+    padding-top: 0px;
+    top: 0;
   }
 
   table {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     text-align: center;
+    padding: 10px;
   }
 
   th,
@@ -855,65 +868,81 @@ th {
     font-size: 1rem;
     bottom: 0;
   }
+
+  .contact-form {
+    padding: 20px;
+  }
 }
 
+/* === mobile: 480px === */
 @media (max-width: 480px) {
   .logo {
     font-size: 1rem;
   }
 
   section {
-    padding: 30px;
-    min-height: 100vw;
-  }
-
-  .about,
-  .mission {
-    padding: 30px;
-    min-height: auto;
+    padding: 40px;
+    min-height: 100vh;
   }
 
   .navbar {
-    padding: 10px;
-    font-size: 0.5rem;
+    padding: 15px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
   }
 
   .navigation {
     justify-content: space-between;
-    gap: 15px;
+    gap: 20px;
+  }
+
+  .title {
+    padding: 20px 0px;
   }
 
   .mission {
-    padding: 20px 15px;
+    padding: 50px 20px;
+    margin: 40px;
   }
 
   .about .h-title {
     text-align: center;
   }
 
+  .schedule .title {
+    font-size: 0.5rem;
+    padding: 50px 0 0 0;
+  }
+
+  .schedule .h-title {
+    font-size: 1.6rem;
+  }
+
+  .schedule .h-title span {
+    font-size: 1.8rem;
+  }
+
   .schedule {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0px;
+    top: 0;
   }
 
   table {
     font-size: 0.5rem;
-    padding: 3px;
     text-align: center;
   }
 
   th,
   td {
-    padding: 5px;
     text-align: center;
   }
 
   .footer-links,
   .footer-credit {
-    font-size: 0.7rem;
     bottom: 0;
     width: 100%;
   }

@@ -14,21 +14,23 @@
   </head>
   <!-- BODY -->
   <body>
-    <!-- BOX 1: NAVIGATION BAR -->
-    <nav class="navbar">
-      <!-- logo -->
-      <a href="home.html" class="logo"><span>FORMULA 1 </span> RACING</a>
+    <!-- BOX 1: HEADER: NAVIGATION BAR -->
+    <header>
+      <nav class="navbar">
+        <!-- logo -->
+        <a href="home.html" class="logo"><span>FORMULA 1 </span> RACING</a>
 
-      <!-- navigation links -->
-      <ul class="navigation">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="events.html">Schedule</a></li>
-        <li><a href="#">Tickets</a></li>
-        <li><a href="home.html#contact">Contact</a></li>
-      </ul>
-      <!-- END HEADER SECTION -->
-    </nav>
+        <!-- navigation links -->
+        <ul class="navigation">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Schedule</a></li>
+          <li><a href="#">Tickets</a></li>
+          <li><a href="home.html#contact">Contact</a></li>
+        </ul>
+        <!-- END HEADER SECTION -->
+      </nav>
+    </header>
 
     <!-- BOX 2: MAIN -->
     <main>
@@ -58,14 +60,14 @@
           <h2 class="h-title">KEEP UP WITH <span>EVENTS</span></h2>
         </header>
 
-        <!-- upcoming CARD CONTAINER -->
+        <!-- CARD CONTAINER -->
         <div class="card-container">
           <!-- 1. PREVIOUS (repeat) -->
-          <div id="previous" class="card">
-            <!-- text -->
-            <div>
-              <a href="#" class="upcoming-btn">PREVIOUS</a>
-            </div>
+          <article id="previous" class="card">
+            <!-- button -->
+            <header>
+              <h3><a href="#" class="upcoming-btn">PREVIOUS</a></h3>
+            </header>
             <!--image -->
             <div class="image-box">
               <img
@@ -81,14 +83,14 @@
               </div>
               <p class="card-dates">MAR 27-29</p>
             </div>
-          </div>
+          </article>
 
           <!-- 2. CURRENT (repeat) -->
-          <div class="card">
-            <!-- card text -->
-            <div>
-              <a href="#" class="upcoming-btn">CURRENT</a>
-            </div>
+          <article class="card">
+            <!-- button -->
+            <header>
+              <h3><a href="#" class="upcoming-btn">CURRENT</a></h3>
+            </header>
             <!--image -->
             <div class="image-box">
               <img
@@ -104,14 +106,14 @@
               </div>
               <p class="card-dates">APR 10-12</p>
             </div>
-          </div>
+          </article>
 
           <!-- 3. UPCOMING (repeat) -->
-          <div class="card">
-            <!-- card text -->
-            <div>
-              <a href="#" class="upcoming-btn">UPCOMING</a>
-            </div>
+          <article class="card">
+            <!-- button -->
+            <header>
+              <h3><a href="#" class="upcoming-btn">UPCOMING</a></h3>
+            </header>
             <!--image -->
             <div class="image-box">
               <img
@@ -127,13 +129,13 @@
               </div>
               <p class="card-dates">MAY 22-24</p>
             </div>
-          </div>
+          </article>
           <!-- END upcoming CARD CONTAINER -->
         </div>
         <!-- END UPCOMING EVENTS SECTION -->
       </section>
 
-      <!-- WRAPPER -->
+      <!-- TEAMS AND CONTACT WRAPPER -->
       <div class="teams-and-contact">
         <!-- TEAMS SECTION -->
         <section class="teams">
@@ -143,7 +145,7 @@
           <!-- HOMEPAGE TEAMS CONTENT -->
           <div class="card-container">
             <!-- homepage teams box 1 (repeat) -->
-            <div class="card">
+            <article class="card">
               <!-- team photo -->
               <div class="image-box">
                 <img
@@ -155,10 +157,10 @@
               <div class="card-text">
                 <h2>Red Bull Racing</h2>
               </div>
-            </div>
+            </article>
 
             <!-- homepage teams box 2 (repeat) -->
-            <div class="card">
+            <article class="card">
               <!-- team photo -->
               <div class="image-box">
                 <img
@@ -170,10 +172,10 @@
               <div class="card-text">
                 <h2>McLaren</h2>
               </div>
-            </div>
+            </article>
 
             <!-- homepage teams box 3 (repeat) -->
-            <div class="card">
+            <article class="card">
               <!-- team photo -->
               <div class="image-box" id="mercedes">
                 <img
@@ -185,10 +187,10 @@
               <div class="card-text">
                 <h2>Mercedes</h2>
               </div>
-            </div>
+            </article>
 
             <!-- homepage teams box 4 (repeat) -->
-            <div class="card">
+            <article class="card">
               <!-- team photo -->
               <div class="image-box">
                 <img
@@ -200,10 +202,10 @@
               <div class="text">
                 <h2 class="ferrari">Scuderia Ferrari</h2>
               </div>
-            </div>
+            </article>
 
             <!-- homepage teams box 5 (repeat) -->
-            <div class="card">
+            <article class="card">
               <!-- team photo -->
               <div class="image-box">
                 <img
@@ -215,10 +217,10 @@
               <div class="card-text">
                 <h2>Aston Martin</h2>
               </div>
-            </div>
+            </article>
 
             <!-- homepage teams box 6 (repeat) -->
-            <div class="card">
+            <article class="card">
               <!-- team photo -->
               <div class="image-box">
                 <img
@@ -230,15 +232,11 @@
               <div class="card-text">
                 <h2>Alpine</h2>
               </div>
-            </div>
-
+            </article>
             <!-- END HOME TEAMS CONTENT -->
           </div>
-
-          <!-- Homepage meet the teams button -->
-          <div>
-            <a href="about.html#drivers" class="teams-btn">MEET THE DRIVERS</a>
-          </div>
+          <!-- Button: Meet the Drivers -->
+          <a href="about.html#drivers" class="teams-btn">MEET THE DRIVERS</a>
           <!-- END HOME TEAMS SECTION -->
         </section>
 
@@ -257,27 +255,27 @@
             <div class="contact-form">
               <h3>SEND US A MESSAGE</h3>
 
-              <!-- input box: name (repeat) -->
+              <!-- input box 1: name (repeat) -->
               <div class="input-box">
                 <input type="text" placeholder="Name" required />
               </div>
 
-              <!-- input box: email (repeat) -->
+              <!-- input box 2: email (repeat) -->
               <div class="input-box">
                 <input type="email" placeholder="Email" required />
               </div>
 
-              <!-- input box: message (repeat) -->
+              <!-- input box 3: message (repeat) -->
               <div class="input-box">
                 <textarea placeholder="Message" required></textarea>
               </div>
 
-              <!-- input box: submit (repeat) -->
+              <!-- input box 4: submit (repeat) -->
               <div class="input-box">
                 <input type="submit" value="Submit" />
               </div>
 
-              <!-- end contact form -->
+              <!-- end contact-form -->
             </div>
             <!-- end form -->
           </form>
@@ -307,6 +305,7 @@
         ></a>
         <!-- End icons -->
       </div>
+      <!-- END FOOTER SECTION -->
     </footer>
     <!-- END BODY -->
   </body>
