@@ -4,34 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Race Calendar</title>
-    <!-- Insert Title -->
+    <title>Formula 1 Racing</title>
 
     <link rel="stylesheet" href="styles.css" class="stylesheet" />
-
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
     />
   </head>
+  <!-- BODY -->
   <body>
-    <!-- Box 1: Header -->
-    <header class="navbar">
-      <a href="home.html" class="logo"><span>FORMULA 1 </span> RACING</a>
-      <ul class="navigation">
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="events.html">Schedule</a></li>
-        <li><a href="#">Tickets</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <!-- End header section -->
+    <!-- BOX 1: HEADER: NAVIGATION BAR -->
+    <header>
+      <nav class="navbar">
+        <!-- logo -->
+        <a href="home.html" class="logo"><span>FORMULA 1 </span> RACING</a>
+
+        <!-- navigation links -->
+        <ul class="navigation">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Schedule</a></li>
+          <li><a href="#">Tickets</a></li>
+          <li><a href="home.html#contact">Contact</a></li>
+        </ul>
+        <!-- END HEADER SECTION -->
+      </nav>
     </header>
 
-    <!-- Box 1: Table -->
-    <section class="schedule">
-      <div class="content">
-        <h2 class="h-title">2026<span> RACE CALENDAR</span></h2>
+    <!-- BOX 2: MAIN -->
+    <main>
+      <!-- SCHEDULE SECTION -->
+      <section class="schedule">
+        <header class="title">
+          <h2 class="h-title">2026<span> RACE CALENDAR</span></h2>
+        </header>
         <table class="race-schedule">
           <tr>
             <th class="tb-headers">Round</th>
@@ -124,15 +131,15 @@
             <th>Melbourne</th>
           </tr>
         </table>
-      </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- FOOTER SECTION -->
-    <div class="footer">
+    <!-- Box 3: FOOTER SECTION -->
+    <footer class="footer">
       <div class="footer-links">
         <ul>
-          <li><a href="#">Privacy Policy | </a></li>
-          <li><a href="#">Terms of Use | </a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Use</a></li>
           <li><a href="home.html#contact">Contact Us</a></li>
         </ul>
       </div>
@@ -143,10 +150,12 @@
         <!-- linkedin -->
         <a href="#" target="_blank"><i class="bx bxl-linkedin-square"></i></a>
         <!-- github -->
-        <a href="#" target="_blank"><i class="bx bxl-github"></i></a>
+        <a href="https://github.com/mbogarin" target="_blank"
+          ><i class="bx bxl-github"></i
+        ></a>
         <!-- End icons -->
       </div>
-    </div>
+    </footer>
     <!-- END BODY -->
   </body>
 </html>
