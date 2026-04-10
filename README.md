@@ -1,4 +1,4 @@
-# event-center-website_magali
+# event-center-website
 
 Event center website - html assignment #2
 
